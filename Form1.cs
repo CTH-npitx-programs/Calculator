@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class frmCalc : Form
     {
-        public Form1()
+        public frmCalc()
         {
             InitializeComponent();
+        }
+
+        private void bttnClose_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
