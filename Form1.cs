@@ -21,6 +21,7 @@ namespace Calculator
 
         }
         bool debug = true;
+        string confirmClose = "please confirm your desire to leave"; //custom text for confirming close
         private void frmCalc_Load(object sender, EventArgs e)
         {
             
@@ -33,24 +34,22 @@ namespace Calculator
             }// if deug off, shrink form for conscisness;
 
             string closeText = bttnClose.Text;
-            string confirmClose = "Please Confirm Your Desire to Leave";
-
             
 
             addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
+        }
 
-            string getNextName()
+        private string getNextName(string originalName)
+        {
+            if (bttnClose.Text == confirmClose)
             {
-                if (bttnClose.Text == closeText)
-                {
-                    return confirmClose;
-                }
-                else
-                {
-                    return closeText;
-                }
+                return confirmClose;
+            }
+            else
+            {
+                return originalName;
             }
         }
 
