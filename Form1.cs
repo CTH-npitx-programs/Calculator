@@ -40,18 +40,6 @@ namespace Calculator
             addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
-
-            string getNextName()
-            {
-                if (bttnClose.Text == closeText)
-                {
-                    return confirmClose;
-                }
-                else
-                {
-                    return closeText;
-                }
-            }
         }
 
 
