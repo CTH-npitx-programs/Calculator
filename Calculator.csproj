@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonNames.cs">
+      <DependentUpon>ButtonNames.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ButtonNames.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +74,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ButtonNames.xsc">
+      <DependentUpon>ButtonNames.xsd</DependentUpon>
+    </None>
+    <None Include="ButtonNames.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ButtonNames.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ButtonNames.xss">
+      <DependentUpon>ButtonNames.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
