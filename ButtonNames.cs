@@ -6,7 +6,7 @@
     {
         partial class bttnNamesDataTable
         {
-           class f
+            class f
         }
     }
 }
