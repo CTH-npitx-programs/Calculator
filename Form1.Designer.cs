@@ -55,6 +55,11 @@
             this.bttnClose.UseVisualStyleBackColor = false;
             this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
             // 
+            // tmr_ConfirmClose
+            // 
+            this.tmr_ConfirmClose.Interval = 2500;
+            this.tmr_ConfirmClose.Tick += new System.EventHandler(this.tmr_ConfirmClose_Tick);
+            // 
             // txt_debug
             // 
             this.txt_debug.ImeMode = System.Windows.Forms.ImeMode.Off;

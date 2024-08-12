@@ -84,8 +84,14 @@ namespace Calculator
                 return getNextName_comp(InitialName).ToString();
             };
 
-            bttnClose.Text = getNextName();
-
+            if ( bttnClose.Text == InitialName) // next name
+            {
+                bttnClose.Text = getNextName();
+            }
+            else {
+                Application.Exit();
+            } // close
+            tmr_ConfirmClose.Start();
             
         }
 
@@ -97,6 +103,12 @@ namespace Calculator
         private void txt_closeName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
+        {
+            tmr_ConfirmClose.Stop();
+            bttnClose.Text = txt_closeName.Text;
         }
     }
 }
