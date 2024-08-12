@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.bttnClose = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tmr_ConfirmClose = new System.Windows.Forms.Timer(this.components);
+            this.txt_debug = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttnClose
             // 
             this.bttnClose.BackColor = System.Drawing.Color.Red;
             this.bttnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bttnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.bttnClose.FlatAppearance.BorderSize = 0;
             this.bttnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -43,7 +46,7 @@
             this.bttnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnClose.ForeColor = System.Drawing.Color.Black;
-            this.bttnClose.Location = new System.Drawing.Point(696, 20);
+            this.bttnClose.Location = new System.Drawing.Point(714, 1);
             this.bttnClose.Name = "bttnClose";
             this.bttnClose.Size = new System.Drawing.Size(85, 43);
             this.bttnClose.TabIndex = 0;
@@ -51,20 +54,28 @@
             this.bttnClose.UseVisualStyleBackColor = false;
             this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
             // 
-            // panel1
+            // txt_debug
             // 
-            this.panel1.Location = new System.Drawing.Point(490, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 1;
+            this.txt_debug.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txt_debug.Location = new System.Drawing.Point(805, 1);
+            this.txt_debug.Multiline = true;
+            this.txt_debug.Name = "txt_debug";
+            this.txt_debug.ReadOnly = true;
+            this.txt_debug.Size = new System.Drawing.Size(200, 203);
+            this.txt_debug.TabIndex = 1;
+            this.txt_debug.TabStop = false;
+            this.txt_debug.Visible = false;
+            this.txt_debug.TextChanged += new System.EventHandler(this.txt_debug_TextChanged);
             // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.CancelButton = this.bttnClose;
+            this.ClientSize = new System.Drawing.Size(1048, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txt_debug);
             this.Controls.Add(this.bttnClose);
             this.HelpButton = true;
             this.MaximizeBox = false;
@@ -73,15 +84,17 @@
             this.Padding = new System.Windows.Forms.Padding(16);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator Inator";
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.frmCalc_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button bttnClose;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer tmr_ConfirmClose;
+        private System.Windows.Forms.TextBox txt_debug;
     }
 }
 
