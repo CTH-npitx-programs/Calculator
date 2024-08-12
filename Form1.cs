@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Calculator
 {
@@ -21,30 +22,33 @@ namespace Calculator
         bool debug = true;
         private void frmCalc_Load(object sender, EventArgs e)
         {
-            lst_TextStore.Items.Clear();
+            
             if( debug == true)
             {
-                lst_TextStore.Visible = true;
-            } //if debug on, see list
+                txt_debug.Visible = true;
+            } //if debug on see list
+            else {
+                this.Size = new Size(816, 489);
+            }// if deug off, shrink form for conscisness
 
-            string addItem(string item, bool newList)
+            string addItem(string item, bool newEntry)
             {
-                if (newList == true)
+                string empty = Environment.NewLine;
+                if (newEntry == true)
                 {
-                    string empty = string.Empty;
-                    lst_TextStore.Items.Add(item);
-                    lst_TextStore.Items.Add(empty);
+                    txt_debug.AppendText(empty);
                 } else
                 {
-                    lst_TextStore.Items.Add(item);
                 }
-                return lst_TextStore.Items.ToString();
+                txt_debug.AppendText(item);
+                txt_debug.AppendText(empty);
+                return txt_debug.Text.ToString();
             };
 
             string closeText = bttnClose.Text;
             string confirmClose = "Please Confirm Your Desire to Leave";
 
-            addItem(debug.ToString(), false); //debug mode?
+            addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
         }
@@ -54,6 +58,11 @@ namespace Calculator
         
 
             
+
+        }
+
+        private void txt_debug_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
