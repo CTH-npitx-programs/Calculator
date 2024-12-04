@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bttnClose = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tmr_ConfirmClose = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // bttnClose
@@ -53,6 +53,10 @@
             this.bttnClose.Text = "Close";
             this.bttnClose.UseVisualStyleBackColor = false;
             this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
+            // 
+            // tmr_ConfirmClose
+            // 
+            this.tmr_ConfirmClose.Interval = 2500;
             // 
             // frmCalc
             // 
@@ -77,7 +81,7 @@
         #endregion
 
         private System.Windows.Forms.Button bttnClose;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tmr_ConfirmClose;
     }
 }
 
