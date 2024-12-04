@@ -32,7 +32,6 @@
             this.bttnClose = new System.Windows.Forms.Button();
             this.tmr_ConfirmClose = new System.Windows.Forms.Timer(this.components);
             this.txt_debug = new System.Windows.Forms.TextBox();
-            this.txt_closeName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -73,14 +72,6 @@
             this.txt_debug.Visible = false;
             this.txt_debug.TextChanged += new System.EventHandler(this.txt_debug_TextChanged);
             // 
-            // txt_closeName
-            // 
-            this.txt_closeName.Location = new System.Drawing.Point(805, 237);
-            this.txt_closeName.Name = "txt_closeName";
-            this.txt_closeName.Size = new System.Drawing.Size(134, 20);
-            this.txt_closeName.TabIndex = 2;
-            this.txt_closeName.TextChanged += new System.EventHandler(this.txt_closeName_TextChanged);
-            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,7 +80,6 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1048, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.txt_closeName);
             this.Controls.Add(this.txt_debug);
             this.Controls.Add(this.bttnClose);
             this.HelpButton = true;
@@ -110,7 +100,6 @@
         private System.Windows.Forms.Button bttnClose;
         private System.Windows.Forms.Timer tmr_ConfirmClose;
         private System.Windows.Forms.TextBox txt_debug;
-        private System.Windows.Forms.TextBox txt_closeName;
     }
 }
 
