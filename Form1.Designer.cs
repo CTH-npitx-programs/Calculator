@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.bttnClose = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -43,7 +42,7 @@
             this.bttnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnClose.ForeColor = System.Drawing.Color.Black;
-            this.bttnClose.Location = new System.Drawing.Point(696, 20);
+            this.bttnClose.Location = new System.Drawing.Point(10, 4);
             this.bttnClose.Name = "bttnClose";
             this.bttnClose.Size = new System.Drawing.Size(85, 43);
             this.bttnClose.TabIndex = 0;
@@ -51,20 +50,12 @@
             this.bttnClose.UseVisualStyleBackColor = false;
             this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(490, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 1;
-            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bttnClose);
             this.HelpButton = true;
             this.MaximizeBox = false;
@@ -81,7 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Button bttnClose;
-        private System.Windows.Forms.Panel panel1;
     }
 }
 
