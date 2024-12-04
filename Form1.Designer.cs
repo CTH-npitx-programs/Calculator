@@ -57,7 +57,6 @@
             // tmr_ConfirmClose
             // 
             this.tmr_ConfirmClose.Interval = 2500;
-            this.tmr_ConfirmClose.Tick += new System.EventHandler(this.tmr_ConfirmClose_Tick);
             // 
             // frmCalc
             // 

@@ -12,8 +12,8 @@ namespace Calculator
 {
     public partial class frmCalc : Form
     {
-        const string closeText = "Close App"; //original text
-        const string confirmText = "Confirm Close"; //confirmation text
+        const string closeText = "Close"; //original text
+        const string confirmText = "Please Confirm"; //confirmation text
 
         public frmCalc()
         {
@@ -25,6 +25,10 @@ namespace Calculator
 
         private void bttnClose_Click(object sender, EventArgs e)
         {
+           if (bttnClose.Text == closeText)
+            {
+                bttnClose.Text = confirmText;
+            }
             Application.Exit();
         }
 
