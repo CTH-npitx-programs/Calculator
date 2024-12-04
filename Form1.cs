@@ -24,11 +24,6 @@ namespace Calculator
         
         private void activeConfirm(int duration)
         {
-            if ( tmr_ConfirmClose.Enabled == false)
-            {
-                MessageBox.Show("error");
-                tmr_ConfirmClose.Enabled = true;
-            }
             tmr_ConfirmClose.Interval = duration;
             tmr_ConfirmClose.Start();
         }
