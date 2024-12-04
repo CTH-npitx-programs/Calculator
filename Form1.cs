@@ -83,10 +83,5 @@ namespace Calculator
             tmr_ConfirmClose.Stop();
             bttnClose.Text = closeText;
         }
-
-        private void txt_closeName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
