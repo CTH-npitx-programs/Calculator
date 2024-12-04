@@ -78,11 +78,6 @@ namespace Calculator
 
         }
 
-        private void txt_closeName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
         {
             tmr_ConfirmClose.Stop();
