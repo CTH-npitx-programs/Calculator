@@ -27,7 +27,7 @@ namespace Calculator
 
             if (bttnClose.Text == closeText ) // next name
             {
-                bttnClose.Text = confirmText();
+                bttnClose.Text = confirmText;
             }
             else
             {
@@ -35,11 +35,11 @@ namespace Calculator
             } // close
             tmr_ConfirmClose.Start();
         }
-        
+
         private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
         {
-            bttnClose.Text = closeText;
             tmr_ConfirmClose.Stop();
+            bttnClose.Text = "test";
         }
     }
 }
