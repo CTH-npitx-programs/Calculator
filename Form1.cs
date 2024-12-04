@@ -24,14 +24,16 @@ namespace Calculator
 
         private void bttnClose_Click(object sender, EventArgs e)
         {
-           if (bttnClose.Text == closeText)
+
+            if (bttnClose.Text == closeText ) // next name
             {
-                bttnClose.Text = confirmText;
-                tmr_ConfirmClose.Start();
-            } else
+                bttnClose.Text = confirmText();
+            }
+            else
             {
                 Application.Exit();
-            }
+            } // close
+            tmr_ConfirmClose.Start();
         }
         
         private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
