@@ -37,6 +37,7 @@ namespace Calculator
 
         private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
         {
+            tmr_ConfirmClose.Stop();
             bttnClose.Text = closeText;
         }
     }
