@@ -28,13 +28,16 @@ namespace Calculator
            if (bttnClose.Text == closeText)
             {
                 bttnClose.Text = confirmText;
+                tmr_ConfirmClose.Start();
+            } else
+            {
+                Application.Exit();
             }
-            Application.Exit();
         }
 
         private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
         {
-
+            bttnClose.Text = closeText;
         }
     }
 }
