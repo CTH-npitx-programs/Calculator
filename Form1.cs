@@ -21,19 +21,13 @@ namespace Calculator
             InitializeComponent();
             bttnClose.Text = closeText; //set button close to use the constant's text
         }
-        
-        private void activeConfirm(int duration)
-        {
-            tmr_ConfirmClose.Interval = duration;
-            tmr_ConfirmClose.Start();
-        }
 
         private void bttnClose_Click(object sender, EventArgs e)
         {
            if (bttnClose.Text == closeText)
             {
                 bttnClose.Text = confirmText;
-                activeConfirm(confirmDuration);
+                tmr_ConfirmClose.Start();
             } else
             {
                 Application.Exit();
