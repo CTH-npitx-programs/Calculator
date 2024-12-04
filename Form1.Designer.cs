@@ -56,6 +56,7 @@
             // 
             // tmr_ConfirmClose
             // 
+            this.tmr_ConfirmClose.Enabled = true;
             this.tmr_ConfirmClose.Interval = 2500;
             // 
             // frmCalc
