@@ -16,10 +16,17 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        const string closeText = "Close";
+        const string confirmText = "Confirm Close";
 
         private void bttnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
