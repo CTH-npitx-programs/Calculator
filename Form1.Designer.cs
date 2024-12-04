@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.bttnClose = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // bttnClose
             // 
             this.bttnClose.BackColor = System.Drawing.Color.Red;
             this.bttnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bttnClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.bttnClose.FlatAppearance.BorderSize = 0;
             this.bttnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -55,6 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.bttnClose);
@@ -73,6 +77,7 @@
         #endregion
 
         private System.Windows.Forms.Button bttnClose;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
