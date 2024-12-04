@@ -45,19 +45,6 @@ namespace Calculator
 
         const string closeText = "Close";
         const string confirmText = "Confirm";
-        private string getNextName_comp(string originalName)
-        {
-            if (bttnClose.Text == originalName)
-            {
-                return confirmClose;
-            }
-            else
-            {
-                return originalName;
-            }
-        }
-
-        int iteration = 1;
 
         private string addItem(string item, bool newEntry)
         {
@@ -75,11 +62,6 @@ namespace Calculator
         }
         private void bttnClose_Click(object sender, EventArgs e)
         {
-            if (iteration == 1)
-            {
-                txt_closeName.Text = bttnClose.Text;
-            }
-
             if ( bttnClose.Text == closeText) // next name
             {
                 bttnClose.Text = confirmText;
