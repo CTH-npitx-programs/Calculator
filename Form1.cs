@@ -12,12 +12,16 @@ namespace Calculator
 {
     public partial class frmCalc : Form
     {
+        const string closeText = "Close App"; //original text
+        const string confirmText = "Confirm Close"; //confirmation text
+
         public frmCalc()
         {
             InitializeComponent();
+            bttnClose.Text = closeText; //set button close to use the constant's text
         }
-        const string closeText = "Close";
-        const string confirmText = "Confirm Close";
+        
+        
 
         private void bttnClose_Click(object sender, EventArgs e)
         {
