@@ -43,6 +43,8 @@ namespace Calculator
             addItem(confirmClose, false); //confirm close
         }
 
+        const string closeText = "Close";
+        const string confirmText = "Confirm";
         private string getNextName_comp(string originalName)
         {
             if (bttnClose.Text == originalName)
@@ -77,16 +79,10 @@ namespace Calculator
             {
                 txt_closeName.Text = bttnClose.Text;
             }
-            iteration++;
-            string InitialName = txt_closeName.Text;
-            
-            string getNextName() {
-                return getNextName_comp(InitialName).ToString();
-            };
 
-            if ( bttnClose.Text == InitialName) // next name
+            if ( bttnClose.Text == closeText) // next name
             {
-                bttnClose.Text = getNextName();
+                bttnClose.Text = confirmText;
             }
             else {
                 Application.Exit();
@@ -108,7 +104,7 @@ namespace Calculator
         private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
         {
             tmr_ConfirmClose.Stop();
-            bttnClose.Text = txt_closeName.Text;
+            bttnClose.Text = closeText;
         }
     }
 }
