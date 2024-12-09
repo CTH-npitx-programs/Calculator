@@ -62,7 +62,7 @@
             // txt_debug
             // 
             this.txt_debug.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.txt_debug.Location = new System.Drawing.Point(805, 1);
+            this.txt_debug.Location = new System.Drawing.Point(846, 1);
             this.txt_debug.Multiline = true;
             this.txt_debug.Name = "txt_debug";
             this.txt_debug.ReadOnly = true;
