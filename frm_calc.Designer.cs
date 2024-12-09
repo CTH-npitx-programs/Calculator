@@ -41,6 +41,14 @@
             this.bttn_9 = new System.Windows.Forms.Button();
             this.bttn_8 = new System.Windows.Forms.Button();
             this.bttn_7 = new System.Windows.Forms.Button();
+            this.bttn_sub = new System.Windows.Forms.Button();
+            this.bttn_add = new System.Windows.Forms.Button();
+            this.bttn_equal = new System.Windows.Forms.Button();
+            this.bttn_mult = new System.Windows.Forms.Button();
+            this.bttn_div = new System.Windows.Forms.Button();
+            this.bttn_mod = new System.Windows.Forms.Button();
+            this.bttn_clear = new System.Windows.Forms.Button();
+            this.bttn_clearEvery = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -162,6 +170,78 @@
             this.bttn_7.Text = "7";
             this.bttn_7.UseVisualStyleBackColor = false;
             // 
+            // bttn_sub
+            // 
+            this.bttn_sub.Location = new System.Drawing.Point(392, 220);
+            this.bttn_sub.Name = "bttn_sub";
+            this.bttn_sub.Size = new System.Drawing.Size(75, 23);
+            this.bttn_sub.TabIndex = 13;
+            this.bttn_sub.Text = "-";
+            this.bttn_sub.UseVisualStyleBackColor = false;
+            // 
+            // bttn_add
+            // 
+            this.bttn_add.Location = new System.Drawing.Point(392, 191);
+            this.bttn_add.Name = "bttn_add";
+            this.bttn_add.Size = new System.Drawing.Size(75, 23);
+            this.bttn_add.TabIndex = 12;
+            this.bttn_add.Text = "+";
+            this.bttn_add.UseVisualStyleBackColor = false;
+            // 
+            // bttn_equal
+            // 
+            this.bttn_equal.Location = new System.Drawing.Point(311, 278);
+            this.bttn_equal.Name = "bttn_equal";
+            this.bttn_equal.Size = new System.Drawing.Size(75, 23);
+            this.bttn_equal.TabIndex = 11;
+            this.bttn_equal.Text = "=";
+            this.bttn_equal.UseVisualStyleBackColor = false;
+            // 
+            // bttn_mult
+            // 
+            this.bttn_mult.Location = new System.Drawing.Point(392, 249);
+            this.bttn_mult.Name = "bttn_mult";
+            this.bttn_mult.Size = new System.Drawing.Size(75, 23);
+            this.bttn_mult.TabIndex = 14;
+            this.bttn_mult.Text = "*";
+            this.bttn_mult.UseVisualStyleBackColor = false;
+            // 
+            // bttn_div
+            // 
+            this.bttn_div.Location = new System.Drawing.Point(392, 278);
+            this.bttn_div.Name = "bttn_div";
+            this.bttn_div.Size = new System.Drawing.Size(75, 23);
+            this.bttn_div.TabIndex = 15;
+            this.bttn_div.Text = "/";
+            this.bttn_div.UseVisualStyleBackColor = false;
+            // 
+            // bttn_mod
+            // 
+            this.bttn_mod.Location = new System.Drawing.Point(392, 162);
+            this.bttn_mod.Name = "bttn_mod";
+            this.bttn_mod.Size = new System.Drawing.Size(75, 23);
+            this.bttn_mod.TabIndex = 16;
+            this.bttn_mod.Text = "%";
+            this.bttn_mod.UseVisualStyleBackColor = false;
+            // 
+            // bttn_clear
+            // 
+            this.bttn_clear.Location = new System.Drawing.Point(149, 162);
+            this.bttn_clear.Name = "bttn_clear";
+            this.bttn_clear.Size = new System.Drawing.Size(75, 23);
+            this.bttn_clear.TabIndex = 17;
+            this.bttn_clear.Text = "Clear";
+            this.bttn_clear.UseVisualStyleBackColor = false;
+            // 
+            // bttn_clearEvery
+            // 
+            this.bttn_clearEvery.Location = new System.Drawing.Point(230, 162);
+            this.bttn_clearEvery.Name = "bttn_clearEvery";
+            this.bttn_clearEvery.Size = new System.Drawing.Size(156, 23);
+            this.bttn_clearEvery.TabIndex = 18;
+            this.bttn_clearEvery.Text = "Clear Equation";
+            this.bttn_clearEvery.UseVisualStyleBackColor = false;
+            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +250,14 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1048, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.bttn_clearEvery);
+            this.Controls.Add(this.bttn_clear);
+            this.Controls.Add(this.bttn_mod);
+            this.Controls.Add(this.bttn_div);
+            this.Controls.Add(this.bttn_mult);
+            this.Controls.Add(this.bttn_sub);
+            this.Controls.Add(this.bttn_add);
+            this.Controls.Add(this.bttn_equal);
             this.Controls.Add(this.bttn_9);
             this.Controls.Add(this.bttn_8);
             this.Controls.Add(this.bttn_7);
@@ -208,6 +296,14 @@
         private System.Windows.Forms.Button bttn_9;
         private System.Windows.Forms.Button bttn_8;
         private System.Windows.Forms.Button bttn_7;
+        private System.Windows.Forms.Button bttn_sub;
+        private System.Windows.Forms.Button bttn_add;
+        private System.Windows.Forms.Button bttn_equal;
+        private System.Windows.Forms.Button bttn_mult;
+        private System.Windows.Forms.Button bttn_div;
+        private System.Windows.Forms.Button bttn_mod;
+        private System.Windows.Forms.Button bttn_clear;
+        private System.Windows.Forms.Button bttn_clearEvery;
     }
 }
 
