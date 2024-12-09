@@ -49,6 +49,7 @@
             this.bttn_mod = new System.Windows.Forms.Button();
             this.bttn_clear = new System.Windows.Forms.Button();
             this.bttn_clearEvery = new System.Windows.Forms.Button();
+            this.bttn_0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -242,6 +243,15 @@
             this.bttn_clearEvery.Text = "Clear Equation";
             this.bttn_clearEvery.UseVisualStyleBackColor = false;
             // 
+            // bttn_0
+            // 
+            this.bttn_0.Location = new System.Drawing.Point(230, 278);
+            this.bttn_0.Name = "bttn_0";
+            this.bttn_0.Size = new System.Drawing.Size(75, 23);
+            this.bttn_0.TabIndex = 19;
+            this.bttn_0.Text = "0";
+            this.bttn_0.UseVisualStyleBackColor = true;
+            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +260,7 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1048, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.bttn_0);
             this.Controls.Add(this.bttn_clearEvery);
             this.Controls.Add(this.bttn_clear);
             this.Controls.Add(this.bttn_mod);
@@ -304,6 +315,7 @@
         private System.Windows.Forms.Button bttn_mod;
         private System.Windows.Forms.Button bttn_clear;
         private System.Windows.Forms.Button bttn_clearEvery;
+        private System.Windows.Forms.Button bttn_0;
     }
 }
 
