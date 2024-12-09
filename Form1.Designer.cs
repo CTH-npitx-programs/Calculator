@@ -45,7 +45,7 @@
             this.bttnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnClose.ForeColor = System.Drawing.Color.Black;
-            this.bttnClose.Location = new System.Drawing.Point(9, 7);
+            this.bttnClose.Location = new System.Drawing.Point(29, 19);
             this.bttnClose.Name = "bttnClose";
             this.bttnClose.Size = new System.Drawing.Size(85, 43);
             this.bttnClose.TabIndex = 0;
