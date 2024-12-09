@@ -50,6 +50,7 @@
             this.bttn_clear = new System.Windows.Forms.Button();
             this.bttn_clearEvery = new System.Windows.Forms.Button();
             this.bttn_0 = new System.Windows.Forms.Button();
+            this.rtb_ans = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -252,6 +253,14 @@
             this.bttn_0.Text = "0";
             this.bttn_0.UseVisualStyleBackColor = true;
             // 
+            // rtb_ans
+            // 
+            this.rtb_ans.Location = new System.Drawing.Point(149, 135);
+            this.rtb_ans.Name = "rtb_ans";
+            this.rtb_ans.Size = new System.Drawing.Size(318, 21);
+            this.rtb_ans.TabIndex = 20;
+            this.rtb_ans.Text = "0";
+            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +269,7 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1048, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.rtb_ans);
             this.Controls.Add(this.bttn_0);
             this.Controls.Add(this.bttn_clearEvery);
             this.Controls.Add(this.bttn_clear);
@@ -316,6 +326,7 @@
         private System.Windows.Forms.Button bttn_clear;
         private System.Windows.Forms.Button bttn_clearEvery;
         private System.Windows.Forms.Button bttn_0;
+        private System.Windows.Forms.RichTextBox rtb_ans;
     }
 }
 
