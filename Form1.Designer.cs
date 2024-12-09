@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.bttnClose = new System.Windows.Forms.Button();
             this.tmr_ConfirmClose = new System.Windows.Forms.Timer(this.components);
+            this.txt_debug = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -45,11 +46,10 @@
             this.bttnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttnClose.ForeColor = System.Drawing.Color.Black;
-            this.bttnClose.Location = new System.Drawing.Point(9, 7);
+            this.bttnClose.Location = new System.Drawing.Point(1, 1);
             this.bttnClose.Name = "bttnClose";
             this.bttnClose.Size = new System.Drawing.Size(85, 43);
             this.bttnClose.TabIndex = 0;
-            this.bttnClose.TabStop = false;
             this.bttnClose.Text = "Close";
             this.bttnClose.UseVisualStyleBackColor = false;
             this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
@@ -57,14 +57,30 @@
             // tmr_ConfirmClose
             // 
             this.tmr_ConfirmClose.Interval = 2500;
+            this.tmr_ConfirmClose.Tick += new System.EventHandler(this.tmr_ConfirmClose_Tick);
+            // 
+            // txt_debug
+            // 
+            this.txt_debug.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txt_debug.Location = new System.Drawing.Point(805, 1);
+            this.txt_debug.Multiline = true;
+            this.txt_debug.Name = "txt_debug";
+            this.txt_debug.ReadOnly = true;
+            this.txt_debug.Size = new System.Drawing.Size(200, 203);
+            this.txt_debug.TabIndex = 1;
+            this.txt_debug.TabStop = false;
+            this.txt_debug.Visible = false;
+            this.txt_debug.TextChanged += new System.EventHandler(this.txt_debug_TextChanged);
             // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.bttnClose;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1048, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.txt_debug);
             this.Controls.Add(this.bttnClose);
             this.HelpButton = true;
             this.MaximizeBox = false;
@@ -73,8 +89,9 @@
             this.Padding = new System.Windows.Forms.Padding(16);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator Inator";
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.frmCalc_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -82,6 +99,7 @@
 
         private System.Windows.Forms.Button bttnClose;
         private System.Windows.Forms.Timer tmr_ConfirmClose;
+        private System.Windows.Forms.TextBox txt_debug;
     }
 }
 
