@@ -189,6 +189,7 @@
             this.bttn_sub.TabIndex = 13;
             this.bttn_sub.Text = "-";
             this.bttn_sub.UseVisualStyleBackColor = false;
+            this.bttn_sub.MouseClick += new System.Windows.Forms.MouseEventHandler(this.op_Click);
             // 
             // bttn_add
             // 
@@ -198,6 +199,7 @@
             this.bttn_add.TabIndex = 12;
             this.bttn_add.Text = "+";
             this.bttn_add.UseVisualStyleBackColor = false;
+            this.bttn_add.MouseClick += new System.Windows.Forms.MouseEventHandler(this.op_Click);
             // 
             // bttn_equal
             // 
@@ -216,6 +218,7 @@
             this.bttn_mult.TabIndex = 14;
             this.bttn_mult.Text = "*";
             this.bttn_mult.UseVisualStyleBackColor = false;
+            this.bttn_mult.MouseClick += new System.Windows.Forms.MouseEventHandler(this.op_Click);
             // 
             // bttn_div
             // 
@@ -225,6 +228,7 @@
             this.bttn_div.TabIndex = 15;
             this.bttn_div.Text = "/";
             this.bttn_div.UseVisualStyleBackColor = false;
+            this.bttn_div.MouseClick += new System.Windows.Forms.MouseEventHandler(this.op_Click);
             // 
             // bttn_mod
             // 
@@ -234,6 +238,7 @@
             this.bttn_mod.TabIndex = 16;
             this.bttn_mod.Text = "%";
             this.bttn_mod.UseVisualStyleBackColor = false;
+            this.bttn_mod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.op_Click);
             // 
             // bttn_clear
             // 

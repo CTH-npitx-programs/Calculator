@@ -6,6 +6,9 @@ namespace Calculator
 {
     public partial class frmCalc : Form
     {
+        float num1 = 0;
+        float num2 = 0;
+        string op = "";
         public frmCalc()
         {
             InitializeComponent();
@@ -84,6 +87,11 @@ namespace Calculator
             // Button btn = (Button)sender;
             Button btn = sender as Button;
             rtb_ans.Text += btn.Text;
+        }
+
+        private void op_Click(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
