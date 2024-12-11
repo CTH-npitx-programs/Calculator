@@ -91,7 +91,13 @@ namespace Calculator
 
         private void op_Click(object sender, MouseEventArgs e)
         {
+            
+        }
+
+        private void op_Click(object sender, EventArgs e)
+        {
             Button btn = sender as Button;
+            op = btn.Text;
         }
     }
 }
