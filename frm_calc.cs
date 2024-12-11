@@ -83,5 +83,19 @@ namespace Calculator
             tmr_ConfirmClose.Stop();
             bttnClose.Text = closeText;
         }
+
+        private void bttn_0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bttn_num_Click(object sender, EventArgs e)
+        {
+            if(rtb_ans.Text == "0")
+            {
+                rtb_ans.Text = "";
+            };
+            Button btn
+        }
     }
 }
