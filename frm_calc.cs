@@ -89,11 +89,6 @@ namespace Calculator
             rtb_ans.Text += btn.Text;
         }
 
-        private void op_Click(object sender, MouseEventArgs e)
-        {
-            
-        }
-
         private void op_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
