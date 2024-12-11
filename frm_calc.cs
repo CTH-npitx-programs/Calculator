@@ -95,5 +95,17 @@ namespace Calculator
             op = btn.Text;
             rtb_ans.Text = "0";
         }
+
+        private void clear_click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn.Text == "Clear Equation")
+            {
+                num1 = 0;
+                num2 = 0;
+                op = "";
+            }
+            rtb_ans.Text = "0";
+        }
     }
 }

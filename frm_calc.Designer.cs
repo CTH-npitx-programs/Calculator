@@ -248,6 +248,7 @@
             this.bttn_clear.TabIndex = 17;
             this.bttn_clear.Text = "Clear";
             this.bttn_clear.UseVisualStyleBackColor = false;
+            this.bttn_clear.Click += new System.EventHandler(this.clear_click);
             // 
             // bttn_clearEvery
             // 
@@ -257,6 +258,7 @@
             this.bttn_clearEvery.TabIndex = 18;
             this.bttn_clearEvery.Text = "Clear Equation";
             this.bttn_clearEvery.UseVisualStyleBackColor = false;
+            this.bttn_clearEvery.Click += new System.EventHandler(this.clear_click);
             // 
             // bttn_0
             // 
