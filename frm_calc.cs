@@ -85,5 +85,10 @@ namespace Calculator
             Button btn = sender as Button;
             rtb_ans.Text += btn.Text;
         }
+
+        private void bttn_mult_Click(object sender, EventArgs e)
+        {
+            btn
+        }
     }
 }

@@ -216,6 +216,7 @@
             this.bttn_mult.TabIndex = 14;
             this.bttn_mult.Text = "*";
             this.bttn_mult.UseVisualStyleBackColor = false;
+            this.bttn_mult.Click += new System.EventHandler(this.bttn_mult_Click);
             // 
             // bttn_div
             // 
