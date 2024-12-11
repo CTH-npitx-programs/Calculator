@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
-using System.Xml.Linq;
 
 namespace Calculator
 {
@@ -84,11 +74,6 @@ namespace Calculator
             bttnClose.Text = closeText;
         }
 
-        private void bttn_0_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bttn_num_Click(object sender, EventArgs e)
         {
             if(rtb_ans.Text == "0")
@@ -96,8 +81,8 @@ namespace Calculator
                 rtb_ans.Text = "";
             };
             // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
-                // Button btn = (Button)sender;
-            Button btn = sender as Button
+            // Button btn = (Button)sender;
+            Button btn = sender as Button;
         }
     }
 }
