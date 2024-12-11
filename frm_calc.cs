@@ -91,7 +91,7 @@ namespace Calculator
 
         private void op_Click(object sender, MouseEventArgs e)
         {
-
+            Button btn = sender as Button;
         }
     }
 }
