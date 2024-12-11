@@ -95,7 +95,9 @@ namespace Calculator
             {
                 rtb_ans.Text = "";
             };
-            Button btn
+            // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
+                // Button btn = (Button)sender;
+            Button btn = sender as Button
         }
     }
 }
