@@ -32,6 +32,25 @@
             this.bttnClose = new System.Windows.Forms.Button();
             this.tmr_ConfirmClose = new System.Windows.Forms.Timer(this.components);
             this.txt_debug = new System.Windows.Forms.TextBox();
+            this.bttn_1 = new System.Windows.Forms.Button();
+            this.bttn_2 = new System.Windows.Forms.Button();
+            this.bttn_3 = new System.Windows.Forms.Button();
+            this.bttn_6 = new System.Windows.Forms.Button();
+            this.bttn_5 = new System.Windows.Forms.Button();
+            this.bttn_4 = new System.Windows.Forms.Button();
+            this.bttn_9 = new System.Windows.Forms.Button();
+            this.bttn_8 = new System.Windows.Forms.Button();
+            this.bttn_7 = new System.Windows.Forms.Button();
+            this.bttn_sub = new System.Windows.Forms.Button();
+            this.bttn_add = new System.Windows.Forms.Button();
+            this.bttn_equal = new System.Windows.Forms.Button();
+            this.bttn_mult = new System.Windows.Forms.Button();
+            this.bttn_div = new System.Windows.Forms.Button();
+            this.bttn_mod = new System.Windows.Forms.Button();
+            this.bttn_clear = new System.Windows.Forms.Button();
+            this.bttn_clearEvery = new System.Windows.Forms.Button();
+            this.bttn_0 = new System.Windows.Forms.Button();
+            this.rtb_ans = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -72,6 +91,176 @@
             this.txt_debug.Visible = false;
             this.txt_debug.TextChanged += new System.EventHandler(this.txt_debug_TextChanged);
             // 
+            // bttn_1
+            // 
+            this.bttn_1.Location = new System.Drawing.Point(149, 249);
+            this.bttn_1.Name = "bttn_1";
+            this.bttn_1.Size = new System.Drawing.Size(75, 23);
+            this.bttn_1.TabIndex = 2;
+            this.bttn_1.Text = "1";
+            this.bttn_1.UseVisualStyleBackColor = true;
+            // 
+            // bttn_2
+            // 
+            this.bttn_2.Location = new System.Drawing.Point(230, 249);
+            this.bttn_2.Name = "bttn_2";
+            this.bttn_2.Size = new System.Drawing.Size(75, 23);
+            this.bttn_2.TabIndex = 3;
+            this.bttn_2.Text = "2";
+            this.bttn_2.UseVisualStyleBackColor = true;
+            // 
+            // bttn_3
+            // 
+            this.bttn_3.Location = new System.Drawing.Point(311, 249);
+            this.bttn_3.Name = "bttn_3";
+            this.bttn_3.Size = new System.Drawing.Size(75, 23);
+            this.bttn_3.TabIndex = 4;
+            this.bttn_3.Text = "3";
+            this.bttn_3.UseVisualStyleBackColor = true;
+            // 
+            // bttn_6
+            // 
+            this.bttn_6.Location = new System.Drawing.Point(311, 220);
+            this.bttn_6.Name = "bttn_6";
+            this.bttn_6.Size = new System.Drawing.Size(75, 23);
+            this.bttn_6.TabIndex = 7;
+            this.bttn_6.Text = "6";
+            this.bttn_6.UseVisualStyleBackColor = true;
+            // 
+            // bttn_5
+            // 
+            this.bttn_5.Location = new System.Drawing.Point(230, 220);
+            this.bttn_5.Name = "bttn_5";
+            this.bttn_5.Size = new System.Drawing.Size(75, 23);
+            this.bttn_5.TabIndex = 6;
+            this.bttn_5.Text = "5";
+            this.bttn_5.UseVisualStyleBackColor = true;
+            // 
+            // bttn_4
+            // 
+            this.bttn_4.Location = new System.Drawing.Point(149, 220);
+            this.bttn_4.Name = "bttn_4";
+            this.bttn_4.Size = new System.Drawing.Size(75, 23);
+            this.bttn_4.TabIndex = 5;
+            this.bttn_4.Text = "4";
+            this.bttn_4.UseVisualStyleBackColor = true;
+            // 
+            // bttn_9
+            // 
+            this.bttn_9.Location = new System.Drawing.Point(311, 191);
+            this.bttn_9.Name = "bttn_9";
+            this.bttn_9.Size = new System.Drawing.Size(75, 23);
+            this.bttn_9.TabIndex = 10;
+            this.bttn_9.Text = "9";
+            this.bttn_9.UseVisualStyleBackColor = false;
+            // 
+            // bttn_8
+            // 
+            this.bttn_8.Location = new System.Drawing.Point(230, 191);
+            this.bttn_8.Name = "bttn_8";
+            this.bttn_8.Size = new System.Drawing.Size(75, 23);
+            this.bttn_8.TabIndex = 9;
+            this.bttn_8.Text = "8";
+            this.bttn_8.UseVisualStyleBackColor = false;
+            // 
+            // bttn_7
+            // 
+            this.bttn_7.Location = new System.Drawing.Point(149, 191);
+            this.bttn_7.Name = "bttn_7";
+            this.bttn_7.Size = new System.Drawing.Size(75, 23);
+            this.bttn_7.TabIndex = 8;
+            this.bttn_7.Text = "7";
+            this.bttn_7.UseVisualStyleBackColor = false;
+            // 
+            // bttn_sub
+            // 
+            this.bttn_sub.Location = new System.Drawing.Point(392, 220);
+            this.bttn_sub.Name = "bttn_sub";
+            this.bttn_sub.Size = new System.Drawing.Size(75, 23);
+            this.bttn_sub.TabIndex = 13;
+            this.bttn_sub.Text = "-";
+            this.bttn_sub.UseVisualStyleBackColor = false;
+            // 
+            // bttn_add
+            // 
+            this.bttn_add.Location = new System.Drawing.Point(392, 191);
+            this.bttn_add.Name = "bttn_add";
+            this.bttn_add.Size = new System.Drawing.Size(75, 23);
+            this.bttn_add.TabIndex = 12;
+            this.bttn_add.Text = "+";
+            this.bttn_add.UseVisualStyleBackColor = false;
+            // 
+            // bttn_equal
+            // 
+            this.bttn_equal.Location = new System.Drawing.Point(311, 278);
+            this.bttn_equal.Name = "bttn_equal";
+            this.bttn_equal.Size = new System.Drawing.Size(75, 23);
+            this.bttn_equal.TabIndex = 11;
+            this.bttn_equal.Text = "=";
+            this.bttn_equal.UseVisualStyleBackColor = false;
+            // 
+            // bttn_mult
+            // 
+            this.bttn_mult.Location = new System.Drawing.Point(392, 249);
+            this.bttn_mult.Name = "bttn_mult";
+            this.bttn_mult.Size = new System.Drawing.Size(75, 23);
+            this.bttn_mult.TabIndex = 14;
+            this.bttn_mult.Text = "*";
+            this.bttn_mult.UseVisualStyleBackColor = false;
+            // 
+            // bttn_div
+            // 
+            this.bttn_div.Location = new System.Drawing.Point(392, 278);
+            this.bttn_div.Name = "bttn_div";
+            this.bttn_div.Size = new System.Drawing.Size(75, 23);
+            this.bttn_div.TabIndex = 15;
+            this.bttn_div.Text = "/";
+            this.bttn_div.UseVisualStyleBackColor = false;
+            // 
+            // bttn_mod
+            // 
+            this.bttn_mod.Location = new System.Drawing.Point(392, 162);
+            this.bttn_mod.Name = "bttn_mod";
+            this.bttn_mod.Size = new System.Drawing.Size(75, 23);
+            this.bttn_mod.TabIndex = 16;
+            this.bttn_mod.Text = "%";
+            this.bttn_mod.UseVisualStyleBackColor = false;
+            // 
+            // bttn_clear
+            // 
+            this.bttn_clear.Location = new System.Drawing.Point(149, 162);
+            this.bttn_clear.Name = "bttn_clear";
+            this.bttn_clear.Size = new System.Drawing.Size(75, 23);
+            this.bttn_clear.TabIndex = 17;
+            this.bttn_clear.Text = "Clear";
+            this.bttn_clear.UseVisualStyleBackColor = false;
+            // 
+            // bttn_clearEvery
+            // 
+            this.bttn_clearEvery.Location = new System.Drawing.Point(230, 162);
+            this.bttn_clearEvery.Name = "bttn_clearEvery";
+            this.bttn_clearEvery.Size = new System.Drawing.Size(156, 23);
+            this.bttn_clearEvery.TabIndex = 18;
+            this.bttn_clearEvery.Text = "Clear Equation";
+            this.bttn_clearEvery.UseVisualStyleBackColor = false;
+            // 
+            // bttn_0
+            // 
+            this.bttn_0.Location = new System.Drawing.Point(230, 278);
+            this.bttn_0.Name = "bttn_0";
+            this.bttn_0.Size = new System.Drawing.Size(75, 23);
+            this.bttn_0.TabIndex = 19;
+            this.bttn_0.Text = "0";
+            this.bttn_0.UseVisualStyleBackColor = true;
+            // 
+            // rtb_ans
+            // 
+            this.rtb_ans.Location = new System.Drawing.Point(149, 135);
+            this.rtb_ans.Name = "rtb_ans";
+            this.rtb_ans.Size = new System.Drawing.Size(318, 21);
+            this.rtb_ans.TabIndex = 20;
+            this.rtb_ans.Text = "0";
+            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,6 +269,25 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1048, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.rtb_ans);
+            this.Controls.Add(this.bttn_0);
+            this.Controls.Add(this.bttn_clearEvery);
+            this.Controls.Add(this.bttn_clear);
+            this.Controls.Add(this.bttn_mod);
+            this.Controls.Add(this.bttn_div);
+            this.Controls.Add(this.bttn_mult);
+            this.Controls.Add(this.bttn_sub);
+            this.Controls.Add(this.bttn_add);
+            this.Controls.Add(this.bttn_equal);
+            this.Controls.Add(this.bttn_9);
+            this.Controls.Add(this.bttn_8);
+            this.Controls.Add(this.bttn_7);
+            this.Controls.Add(this.bttn_6);
+            this.Controls.Add(this.bttn_5);
+            this.Controls.Add(this.bttn_4);
+            this.Controls.Add(this.bttn_3);
+            this.Controls.Add(this.bttn_2);
+            this.Controls.Add(this.bttn_1);
             this.Controls.Add(this.txt_debug);
             this.Controls.Add(this.bttnClose);
             this.HelpButton = true;
@@ -100,6 +308,25 @@
         private System.Windows.Forms.Button bttnClose;
         private System.Windows.Forms.Timer tmr_ConfirmClose;
         private System.Windows.Forms.TextBox txt_debug;
+        private System.Windows.Forms.Button bttn_1;
+        private System.Windows.Forms.Button bttn_2;
+        private System.Windows.Forms.Button bttn_3;
+        private System.Windows.Forms.Button bttn_6;
+        private System.Windows.Forms.Button bttn_5;
+        private System.Windows.Forms.Button bttn_4;
+        private System.Windows.Forms.Button bttn_9;
+        private System.Windows.Forms.Button bttn_8;
+        private System.Windows.Forms.Button bttn_7;
+        private System.Windows.Forms.Button bttn_sub;
+        private System.Windows.Forms.Button bttn_add;
+        private System.Windows.Forms.Button bttn_equal;
+        private System.Windows.Forms.Button bttn_mult;
+        private System.Windows.Forms.Button bttn_div;
+        private System.Windows.Forms.Button bttn_mod;
+        private System.Windows.Forms.Button bttn_clear;
+        private System.Windows.Forms.Button bttn_clearEvery;
+        private System.Windows.Forms.Button bttn_0;
+        private System.Windows.Forms.RichTextBox rtb_ans;
     }
 }
 
