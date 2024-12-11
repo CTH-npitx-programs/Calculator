@@ -93,6 +93,7 @@ namespace Calculator
         {
             Button btn = sender as Button;
             op = btn.Text;
+            rtb_ans.Text = "0";
         }
     }
 }
