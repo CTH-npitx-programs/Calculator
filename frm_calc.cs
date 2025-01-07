@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -114,18 +115,39 @@ namespace Calculator
 
             switch ( op ) //runs only exact kinda like an if and an equal, with in-built if-else
             {
-                case "+";
+                case "+":
                     rtb_ans.Text = (num1 + num2).ToString();
                     break;
-                case = "-";
+                case "-":
                     rtb_ans.Text = (num1 - num2).ToString();
-                    break
-                case = "*";
+                    break;
+                case "*":
                         rtb_ans.Text = (num1 * num2).ToString();
                     break;
-                case "/";
-                    rtb_ans.Text = (num1 / num2).ToString();
+                case "/":
+                    if (num2 != 0)
+                    {
+                        rtb_ans.Text = (num1 / num2).ToString();
+                    } else {
+                        MessageBox.Show("error");
+                    }
                     break;
+                case "%":
+                    if (num2 != 0)
+                    {
+                        rtb_ans.Text = (num1 % num2).ToString();
+                    } else
+                    {
+                        MessageBox.Show("Divide by 0 error");
+                    }
+                    break;
+                default:
+                    {
+                        rtb_ans.Text = num1.ToString();
+                        break;
+                    }
+         num1 = 0;
+         num2 = 0;
             }
         }
     }
