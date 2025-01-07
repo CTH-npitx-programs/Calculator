@@ -11,6 +11,7 @@ namespace Calculator
         float num2 = 0;
         string op = "";
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
+        bool firstnum = false; //flag for if it's the first number
         public frmCalc()
         {
             InitializeComponent();
@@ -81,13 +82,19 @@ namespace Calculator
 
         private void bttn_num_Click(object sender, EventArgs e)
         {
-            if(rtb_ans.Text == "0")
+            Button btn = sender as Button;
+
+            if (rtb_ans.Text == "0" || firstnum)
             {
                 rtb_ans.Text = "";
+            }
+            else
+            {
+                rtb_ans.Text += btn.Text;
             };
             // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
             // Button btn = (Button)sender;
-            Button btn = sender as Button;
+            
             rtb_ans.Text += btn.Text;
         }
 
@@ -95,7 +102,10 @@ namespace Calculator
         {
             Button btn = sender as Button;
             op = btn.Text;
+            num1 = float.Parse(rtb_ans.Text);
             rtb_ans.Text = "0"; //set to 0 as after hitting operator you need 0, si?
+            firstnum = false;
+
         }
 
         private void clear_click(object sender, EventArgs e)
@@ -108,6 +118,7 @@ namespace Calculator
                 op = "";
             } 
             rtb_ans.Text = "0";
+            firstnum = false;
         }
 
         private void bttn_equal_Click(object sender, EventArgs e)
@@ -147,9 +158,12 @@ namespace Calculator
                         rtb_ans.Text = num1.ToString();
                         break;
                     }
-         num1 = 0;
-         num2 = 0;
+         
             }
+            num1 = 0;
+            num2 = 0;
+            op = "";
+            firstnum = true;
         }
     }
 }
