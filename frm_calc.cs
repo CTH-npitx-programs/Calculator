@@ -141,7 +141,7 @@ namespace Calculator
                     {
                         rtb_ans.Text = (num1 / num2).ToString();
                     } else {
-                        MessageBox.Show("error");
+                        MessageBox.Show(divError);
                     }
                     break;
                 case "%":
@@ -150,7 +150,7 @@ namespace Calculator
                         rtb_ans.Text = (num1 % num2).ToString();
                     } else
                     {
-                        MessageBox.Show("Divide by 0 error");
+                        MessageBox.Show(divError);
                     }
                     break;
                 default:
