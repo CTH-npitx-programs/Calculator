@@ -93,19 +93,40 @@ namespace Calculator
         {
             Button btn = sender as Button;
             op = btn.Text;
-            rtb_ans.Text = "0";
+            rtb_ans.Text = "0"; //set to 0 as after hitting operator you need 0, si?
         }
 
         private void clear_click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if (btn.Text == "Clear Equation")
+            if (btn.Text == "Clear Equation") //ensure it's clear equation (no operators, both nums are 0, 0 as answer)
             {
                 num1 = 0;
                 num2 = 0;
                 op = "";
-            }
+            } 
             rtb_ans.Text = "0";
+        }
+
+        private void bttn_equal_Click(object sender, EventArgs e)
+        {
+            num2 = float.Parse(rtb_ans.Text);
+
+            switch ( op ) //runs only exact kinda like an if and an equal, with in-built if-else
+            {
+                case "+";
+                    rtb_ans.Text = (num1 + num2).ToString();
+                    break;
+                case = "-";
+                    rtb_ans.Text = (num1 - num2).ToString();
+                    break
+                case = "*";
+                        rtb_ans.Text = (num1 * num2).ToString();
+                    break;
+                case "/";
+                    rtb_ans.Text = (num1 / num2).ToString();
+                    break;
+            }
         }
     }
 }
