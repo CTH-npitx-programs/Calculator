@@ -15,6 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Planing", "Planing", "{3C63
 		.github\Planing.txt = .github\Planing.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "information", "information", "{4C05B976-CE5F-4F0A-98C9-FC814E5DD28E}"
+	ProjectSection(SolutionItems) = preProject
+		plans.txt = plans.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +36,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3C6331E6-F22F-4A68-A98A-60470DEEF3CA} = {AF2FEF8F-9F77-4A3C-9345-8B42A0AE58AE}
+		{4C05B976-CE5F-4F0A-98C9-FC814E5DD28E} = {3C6331E6-F22F-4A68-A98A-60470DEEF3CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79602F43-DCBE-4C2E-A6CE-FF2BC5F86E54}
