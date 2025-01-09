@@ -12,13 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Information", "Information"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Planing", "Planing", "{3C6331E6-F22F-4A68-A98A-60470DEEF3CA}"
 	ProjectSection(SolutionItems) = preProject
+		.github\Information\Completed Components.txt = .github\Information\Completed Components.txt
 		.github\Planing.txt = .github\Planing.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "information", "information", "{4C05B976-CE5F-4F0A-98C9-FC814E5DD28E}"
-	ProjectSection(SolutionItems) = preProject
-		Completed Components.txt = Completed Components.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
