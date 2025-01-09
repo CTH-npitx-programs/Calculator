@@ -291,6 +291,7 @@
             this.bttn_recall.TabIndex = 21;
             this.bttn_recall.Text = "Recall Memory";
             this.bttn_recall.UseVisualStyleBackColor = true;
+            this.bttn_recall.Click += new System.EventHandler(this.bttn_recall_Click);
             // 
             // bttn_storeMem
             // 
@@ -298,8 +299,9 @@
             this.bttn_storeMem.Name = "bttn_storeMem";
             this.bttn_storeMem.Size = new System.Drawing.Size(103, 23);
             this.bttn_storeMem.TabIndex = 22;
-            this.bttn_storeMem.Text = "Store Memory";
+            this.bttn_storeMem.Text = "Store Result";
             this.bttn_storeMem.UseVisualStyleBackColor = true;
+            this.bttn_storeMem.Visible = false;
             // 
             // bttn_memClear
             // 

@@ -178,5 +178,18 @@ namespace Calculator
                 bttn_storeMem.Visible = true;
             }
         }
+
+        private void bttn_recall_Click(object sender, EventArgs e)
+        {
+            
+            if (rtb_ans.Text == "0" || firstnum)
+            {
+                rtb_ans.Text = "";
+            }
+            else
+            {
+                rtb_ans.Text += btn.Text;
+            };
+        }
     }
 }
