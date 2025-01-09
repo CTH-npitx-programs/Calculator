@@ -158,7 +158,7 @@
             this.bttn_9.Size = new System.Drawing.Size(75, 23);
             this.bttn_9.TabIndex = 10;
             this.bttn_9.Text = "9";
-            this.bttn_9.UseVisualStyleBackColor = false;
+            this.bttn_9.UseVisualStyleBackColor = true;
             this.bttn_9.Click += new System.EventHandler(this.bttn_num_Click);
             // 
             // bttn_8
@@ -168,7 +168,7 @@
             this.bttn_8.Size = new System.Drawing.Size(75, 23);
             this.bttn_8.TabIndex = 9;
             this.bttn_8.Text = "8";
-            this.bttn_8.UseVisualStyleBackColor = false;
+            this.bttn_8.UseVisualStyleBackColor = true;
             this.bttn_8.Click += new System.EventHandler(this.bttn_num_Click);
             // 
             // bttn_7
@@ -178,7 +178,7 @@
             this.bttn_7.Size = new System.Drawing.Size(75, 23);
             this.bttn_7.TabIndex = 8;
             this.bttn_7.Text = "7";
-            this.bttn_7.UseVisualStyleBackColor = false;
+            this.bttn_7.UseVisualStyleBackColor = true;
             this.bttn_7.Click += new System.EventHandler(this.bttn_num_Click);
             // 
             // bttn_sub
@@ -285,7 +285,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.bttnClose;
-            this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
             this.Controls.Add(this.rtb_ans);
             this.Controls.Add(this.bttn_0);
