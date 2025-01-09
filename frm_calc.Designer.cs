@@ -189,6 +189,7 @@
             this.bttn_sub.TabIndex = 13;
             this.bttn_sub.Text = "-";
             this.bttn_sub.UseVisualStyleBackColor = false;
+            this.bttn_sub.Click += new System.EventHandler(this.op_Click);
             // 
             // bttn_add
             // 
@@ -198,6 +199,7 @@
             this.bttn_add.TabIndex = 12;
             this.bttn_add.Text = "+";
             this.bttn_add.UseVisualStyleBackColor = false;
+            this.bttn_add.Click += new System.EventHandler(this.op_Click);
             // 
             // bttn_equal
             // 
@@ -207,6 +209,7 @@
             this.bttn_equal.TabIndex = 11;
             this.bttn_equal.Text = "=";
             this.bttn_equal.UseVisualStyleBackColor = false;
+            this.bttn_equal.Click += new System.EventHandler(this.bttn_equal_Click);
             // 
             // bttn_mult
             // 
@@ -216,7 +219,7 @@
             this.bttn_mult.TabIndex = 14;
             this.bttn_mult.Text = "*";
             this.bttn_mult.UseVisualStyleBackColor = false;
-            this.bttn_mult.Click += new System.EventHandler(this.bttn_mult_Click);
+            this.bttn_mult.Click += new System.EventHandler(this.op_Click);
             // 
             // bttn_div
             // 
@@ -226,6 +229,7 @@
             this.bttn_div.TabIndex = 15;
             this.bttn_div.Text = "/";
             this.bttn_div.UseVisualStyleBackColor = false;
+            this.bttn_div.Click += new System.EventHandler(this.op_Click);
             // 
             // bttn_mod
             // 
@@ -235,6 +239,7 @@
             this.bttn_mod.TabIndex = 16;
             this.bttn_mod.Text = "%";
             this.bttn_mod.UseVisualStyleBackColor = false;
+            this.bttn_mod.Click += new System.EventHandler(this.op_Click);
             // 
             // bttn_clear
             // 
@@ -244,6 +249,7 @@
             this.bttn_clear.TabIndex = 17;
             this.bttn_clear.Text = "Clear";
             this.bttn_clear.UseVisualStyleBackColor = false;
+            this.bttn_clear.Click += new System.EventHandler(this.clear_click);
             // 
             // bttn_clearEvery
             // 
@@ -253,6 +259,7 @@
             this.bttn_clearEvery.TabIndex = 18;
             this.bttn_clearEvery.Text = "Clear Equation";
             this.bttn_clearEvery.UseVisualStyleBackColor = false;
+            this.bttn_clearEvery.Click += new System.EventHandler(this.clear_click);
             // 
             // bttn_0
             // 
