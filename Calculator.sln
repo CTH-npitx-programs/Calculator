@@ -5,18 +5,20 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator.csproj", "{075FDFF7-D82F-4309-8D4A-39ECED2F8A56}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Information", "Information", "{AF2FEF8F-9F77-4A3C-9345-8B42A0AE58AE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Information", "Information", "{3C6331E6-F22F-4A68-A98A-60470DEEF3CA}"
 	ProjectSection(SolutionItems) = preProject
 		.github\README.md = .github\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Planing", "Planing", "{3C6331E6-F22F-4A68-A98A-60470DEEF3CA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plans", "Plans", "{8071185F-D459-4ACC-8918-F4CEF633F348}"
 	ProjectSection(SolutionItems) = preProject
-		.github\Information\Completed Components.txt = .github\Information\Completed Components.txt
 		.github\Planing.txt = .github\Planing.txt
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "information", "information", "{4C05B976-CE5F-4F0A-98C9-FC814E5DD28E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Complete", "Complete", "{7FCDFAD6-A3F0-4351-AB88-3CB7414755A8}"
+	ProjectSection(SolutionItems) = preProject
+		.github\Information\Completed Components.txt = .github\Information\Completed Components.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3C6331E6-F22F-4A68-A98A-60470DEEF3CA} = {AF2FEF8F-9F77-4A3C-9345-8B42A0AE58AE}
-		{4C05B976-CE5F-4F0A-98C9-FC814E5DD28E} = {3C6331E6-F22F-4A68-A98A-60470DEEF3CA}
+		{8071185F-D459-4ACC-8918-F4CEF633F348} = {3C6331E6-F22F-4A68-A98A-60470DEEF3CA}
+		{7FCDFAD6-A3F0-4351-AB88-3CB7414755A8} = {3C6331E6-F22F-4A68-A98A-60470DEEF3CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79602F43-DCBE-4C2E-A6CE-FF2BC5F86E54}
