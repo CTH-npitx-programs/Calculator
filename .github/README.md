@@ -12,4 +12,6 @@
 10. Pressing = without a valid equation in the calculation box displays an error 
 11. After the equation is calculated, users should be able to perform further calculations on the result. 
 12. Pressing Clear clears the calculation box and wipes any stored data 
-13. Pressing Exit exits the program 
+13. Pressing Exit exits the program
+
+14. convert to RPN
