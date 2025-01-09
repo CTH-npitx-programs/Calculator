@@ -195,6 +195,7 @@ namespace Calculator
                 //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
             txt_memPrev.Visible = memClear;
             bttn_recal.Visible = memClear;
+            bttn_clear.Visible = memClear;
             
         }
 
@@ -203,6 +204,7 @@ namespace Calculator
             memClear = false;
             txt_memPrev.Visible = memClear;
             bttn_recal.Visible = memClear;
+            bttn_clear.Visible = memclear;
             mem = "";
         }
     }

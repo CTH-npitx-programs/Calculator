@@ -314,6 +314,7 @@
             this.txt_memPrev.Size = new System.Drawing.Size(75, 20);
             this.txt_memPrev.TabIndex = 0;
             this.txt_memPrev.TabStop = false;
+            this.txt_memPrev.Visible = false;
             this.txt_memPrev.WordWrap = false;
             // 
             // bttn_clearMem
