@@ -52,7 +52,7 @@
     <Compile Include="frm_calc.Designer.cs">
       <DependentUpon>frm_calc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Calculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_calc.resx">
       <DependentUpon>frm_calc.cs</DependentUpon>
