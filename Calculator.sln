@@ -20,6 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Complete", "Complete", "{7F
 		.github\Information\Completed Components.txt = .github\Information\Completed Components.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flowcharts", "Flowcharts", "{AD44502A-9919-44B8-9EA0-F412CBB1E1F0}"
+	ProjectSection(SolutionItems) = preProject
+		.github\flowcharts\Basic Version- Four Function\Calculator- basis.png = .github\flowcharts\Basic Version- Four Function\Calculator- basis.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8071185F-D459-4ACC-8918-F4CEF633F348} = {3C6331E6-F22F-4A68-A98A-60470DEEF3CA}
 		{7FCDFAD6-A3F0-4351-AB88-3CB7414755A8} = {3C6331E6-F22F-4A68-A98A-60470DEEF3CA}
+		{AD44502A-9919-44B8-9EA0-F412CBB1E1F0} = {3C6331E6-F22F-4A68-A98A-60470DEEF3CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79602F43-DCBE-4C2E-A6CE-FF2BC5F86E54}
