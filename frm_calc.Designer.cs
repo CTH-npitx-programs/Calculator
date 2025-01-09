@@ -54,6 +54,7 @@
             this.bttn_recal = new System.Windows.Forms.Button();
             this.bttn_memStore = new System.Windows.Forms.Button();
             this.txt_memPrev = new System.Windows.Forms.TextBox();
+            this.bttn_clearMem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -291,11 +292,12 @@
             this.bttn_recal.TabIndex = 21;
             this.bttn_recal.Text = "Recall";
             this.bttn_recal.UseVisualStyleBackColor = true;
+            this.bttn_recal.Visible = false;
             this.bttn_recal.Click += new System.EventHandler(this.bttn_num_Click);
             // 
             // bttn_memStore
             // 
-            this.bttn_memStore.Location = new System.Drawing.Point(473, 133);
+            this.bttn_memStore.Location = new System.Drawing.Point(68, 278);
             this.bttn_memStore.Name = "bttn_memStore";
             this.bttn_memStore.Size = new System.Drawing.Size(75, 23);
             this.bttn_memStore.TabIndex = 22;
@@ -306,13 +308,24 @@
             // 
             // txt_memPrev
             // 
-            this.txt_memPrev.Location = new System.Drawing.Point(473, 107);
+            this.txt_memPrev.Location = new System.Drawing.Point(149, 109);
             this.txt_memPrev.Name = "txt_memPrev";
             this.txt_memPrev.ReadOnly = true;
             this.txt_memPrev.Size = new System.Drawing.Size(75, 20);
             this.txt_memPrev.TabIndex = 0;
             this.txt_memPrev.TabStop = false;
             this.txt_memPrev.WordWrap = false;
+            // 
+            // bttn_clearMem
+            // 
+            this.bttn_clearMem.Location = new System.Drawing.Point(19, 162);
+            this.bttn_clearMem.Name = "bttn_clearMem";
+            this.bttn_clearMem.Size = new System.Drawing.Size(124, 23);
+            this.bttn_clearMem.TabIndex = 23;
+            this.bttn_clearMem.Text = "Clear Memory";
+            this.bttn_clearMem.UseVisualStyleBackColor = false;
+            this.bttn_clearMem.Visible = false;
+            this.bttn_clearMem.Click += new System.EventHandler(this.bttn_clearMem_Click);
             // 
             // frmCalc
             // 
@@ -322,6 +335,7 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.bttn_clearMem);
             this.Controls.Add(this.txt_memPrev);
             this.Controls.Add(this.bttn_memStore);
             this.Controls.Add(this.bttn_recal);
@@ -386,6 +400,7 @@
         private System.Windows.Forms.Button bttn_recal;
         private System.Windows.Forms.Button bttn_memStore;
         private System.Windows.Forms.TextBox txt_memPrev;
+        private System.Windows.Forms.Button bttn_clearMem;
     }
 }
 

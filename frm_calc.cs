@@ -13,7 +13,7 @@ namespace Calculator
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
         bool firstnum = false; //flag for if it's the first number
         string mem = "";
-        bool memClear = true;
+        bool memClear = true; //whether the memory is clear
 
         public frmCalc()
         {
@@ -40,7 +40,7 @@ namespace Calculator
             addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
-            memClear = !memClear;
+            memClear = !memClear; //invert it, as the useage makes it such that the variable should be inverse. Another possible flaw, fix?
         }
 
         const string closeText = "Close";
@@ -87,6 +87,12 @@ namespace Calculator
         private void bttn_num_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
+            string val = btn.Text;
+            if (val == bttn_recal.Text)
+            {
+                val = mem;
+            }
+
 
             if (rtb_ans.Text == "0" || firstnum)
             {
@@ -189,7 +195,12 @@ namespace Calculator
             memClear = false; //shows memory is not clear, to allow viewing of memory and such
                 //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
             txt_memPrev.Visible = memClear;
-            bttn_mem
+            
+        }
+
+        private void bttn_clearMem_Click(object sender, EventArgs e)
+        {
+            memClear = true;
         }
     }
 }
