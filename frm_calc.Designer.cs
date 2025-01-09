@@ -51,6 +51,8 @@
             this.bttn_clearEvery = new System.Windows.Forms.Button();
             this.bttn_0 = new System.Windows.Forms.Button();
             this.rtb_ans = new System.Windows.Forms.RichTextBox();
+            this.bttn_recal = new System.Windows.Forms.Button();
+            this.bttn_memStore = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -278,6 +280,28 @@
             this.rtb_ans.Size = new System.Drawing.Size(318, 21);
             this.rtb_ans.TabIndex = 20;
             this.rtb_ans.Text = "0";
+            this.rtb_ans.TextChanged += new System.EventHandler(this.rtb_ans_TextChanged);
+            // 
+            // bttn_recal
+            // 
+            this.bttn_recal.Location = new System.Drawing.Point(149, 278);
+            this.bttn_recal.Name = "bttn_recal";
+            this.bttn_recal.Size = new System.Drawing.Size(75, 23);
+            this.bttn_recal.TabIndex = 21;
+            this.bttn_recal.Text = "Recall";
+            this.bttn_recal.UseVisualStyleBackColor = true;
+            this.bttn_recal.Click += new System.EventHandler(this.bttn_num_Click);
+            // 
+            // bttn_memStore
+            // 
+            this.bttn_memStore.Location = new System.Drawing.Point(473, 133);
+            this.bttn_memStore.Name = "bttn_memStore";
+            this.bttn_memStore.Size = new System.Drawing.Size(75, 23);
+            this.bttn_memStore.TabIndex = 22;
+            this.bttn_memStore.Text = "Store";
+            this.bttn_memStore.UseVisualStyleBackColor = true;
+            this.bttn_memStore.Visible = false;
+            this.bttn_memStore.Click += new System.EventHandler(this.bttn_memStore_Click);
             // 
             // frmCalc
             // 
@@ -287,6 +311,8 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.bttn_memStore);
+            this.Controls.Add(this.bttn_recal);
             this.Controls.Add(this.rtb_ans);
             this.Controls.Add(this.bttn_0);
             this.Controls.Add(this.bttn_clearEvery);
@@ -345,6 +371,8 @@
         private System.Windows.Forms.Button bttn_clearEvery;
         private System.Windows.Forms.Button bttn_0;
         private System.Windows.Forms.RichTextBox rtb_ans;
+        private System.Windows.Forms.Button bttn_recal;
+        private System.Windows.Forms.Button bttn_memStore;
     }
 }
 
