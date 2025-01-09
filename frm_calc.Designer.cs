@@ -281,6 +281,7 @@
             this.rtb_ans.Size = new System.Drawing.Size(318, 21);
             this.rtb_ans.TabIndex = 20;
             this.rtb_ans.Text = "0";
+            this.rtb_ans.TextChanged += new System.EventHandler(this.rtb_ans_TextChanged);
             // 
             // bttn_recall
             // 

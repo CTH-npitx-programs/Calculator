@@ -12,6 +12,7 @@ namespace Calculator
         string op = "";
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
         bool firstnum = false; //flag for if it's the first number
+        float numMem = 0; //an initial placheolder for memory
         public frmCalc()
         {
             InitializeComponent();
@@ -164,6 +165,18 @@ namespace Calculator
             num2 = 0;
             op = "";
             firstnum = true;
+        }
+
+        private void rtb_ans_TextChanged(object sender, EventArgs e)
+        {
+            string value = rtb_ans.Text;
+            if (value.Equals(null) || value.Equals("0"))
+            {
+                bttn_storeMem.Visible = false;
+            } else
+            {
+                bttn_storeMem.Visible = true;
+            }
         }
     }
 }
