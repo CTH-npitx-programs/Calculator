@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -9,6 +10,8 @@ namespace Calculator
         float num1 = 0;
         float num2 = 0;
         string op = "";
+        const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
+        bool firstnum = false; //flag for if it's the first number
         public frmCalc()
         {
             InitializeComponent();
@@ -79,19 +82,88 @@ namespace Calculator
 
         private void bttn_num_Click(object sender, EventArgs e)
         {
-            if(rtb_ans.Text == "0")
+            Button btn = sender as Button;
+
+            if (rtb_ans.Text == "0" || firstnum)
             {
                 rtb_ans.Text = "";
+            }
+            else
+            {
+                rtb_ans.Text += btn.Text;
             };
             // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
             // Button btn = (Button)sender;
-            Button btn = sender as Button;
+            
             rtb_ans.Text += btn.Text;
         }
 
-        private void op_Click(object sender, MouseEventArgs e)
+        private void op_Click(object sender, EventArgs e)
         {
+            Button btn = sender as Button;
+            op = btn.Text;
+            num1 = float.Parse(rtb_ans.Text);
+            rtb_ans.Text = "0"; //set to 0 as after hitting operator you need 0, si?
+            firstnum = false;
 
+        }
+
+        private void clear_click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn.Text == "Clear Equation") //ensure it's clear equation (no operators, both nums are 0, 0 as answer)
+            {
+                num1 = 0;
+                num2 = 0;
+                op = "";
+            } 
+            rtb_ans.Text = "0";
+            firstnum = false;
+        }
+
+        private void bttn_equal_Click(object sender, EventArgs e)
+        {
+            num2 = float.Parse(rtb_ans.Text);
+
+            switch ( op ) //runs only exact kinda like an if and an equal, with in-built if-else
+            {
+                case "+":
+                    rtb_ans.Text = (num1 + num2).ToString();
+                    break;
+                case "-":
+                    rtb_ans.Text = (num1 - num2).ToString();
+                    break;
+                case "*":
+                        rtb_ans.Text = (num1 * num2).ToString();
+                    break;
+                case "/":
+                    if (num2 != 0)
+                    {
+                        rtb_ans.Text = (num1 / num2).ToString();
+                    } else {
+                        MessageBox.Show(divError);
+                    }
+                    break;
+                case "%":
+                    if (num2 != 0)
+                    {
+                        rtb_ans.Text = (num1 % num2).ToString();
+                    } else
+                    {
+                        MessageBox.Show(divError);
+                    }
+                    break;
+                default:
+                    {
+                        rtb_ans.Text = num1.ToString();
+                        break;
+                    }
+         
+            }
+            num1 = 0;
+            num2 = 0;
+            op = "";
+            firstnum = true;
         }
     }
 }
