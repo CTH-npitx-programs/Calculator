@@ -25,6 +25,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Function", "4-Function", "{4F8B98D0-9892-4BC6-AB10-F787AEFFBDB6}"
 	ProjectSection(SolutionItems) = preProject
 		.github\flowcharts\Basic Version- Four Function\4-function flowchart.png = .github\flowcharts\Basic Version- Four Function\4-function flowchart.png
+		.github\flowcharts\Basic Version- Four Function\Calculator.drawio = .github\flowcharts\Basic Version- Four Function\Calculator.drawio
 	EndProjectSection
 EndProject
 Global
