@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Planing", "Planing", "{3C63
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "information", "information", "{4C05B976-CE5F-4F0A-98C9-FC814E5DD28E}"
 	ProjectSection(SolutionItems) = preProject
-		plans.txt = plans.txt
+		Completed Components.txt = Completed Components.txt
 	EndProjectSection
 EndProject
 Global
