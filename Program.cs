@@ -16,7 +16,7 @@ namespace Calculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run( frmCalc());
+            Application.Run(new frmCalc());
         }
     }
 }
