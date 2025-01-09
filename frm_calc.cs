@@ -13,6 +13,8 @@ namespace Calculator
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
         bool firstnum = false; //flag for if it's the first number
         string mem = "";
+        bool memClear = true;
+
         public frmCalc()
         {
             InitializeComponent();
@@ -38,6 +40,7 @@ namespace Calculator
             addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
+            memClear = !memClear;
         }
 
         const string closeText = "Close";
@@ -182,6 +185,11 @@ namespace Calculator
         private void bttn_memStore_Click(object sender, EventArgs e)
         {
             mem = rtb_ans.Text;
+            txt_memPrev.Text = mem; //shows the stored value in the textbox
+            memClear = false; //shows memory is not clear, to allow viewing of memory and such
+                //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
+            txt_memPrev.Visible = memClear;
+            bttn_mem
         }
     }
 }

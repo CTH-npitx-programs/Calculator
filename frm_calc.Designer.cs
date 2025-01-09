@@ -53,6 +53,7 @@
             this.rtb_ans = new System.Windows.Forms.RichTextBox();
             this.bttn_recal = new System.Windows.Forms.Button();
             this.bttn_memStore = new System.Windows.Forms.Button();
+            this.txt_memPrev = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -303,6 +304,16 @@
             this.bttn_memStore.Visible = false;
             this.bttn_memStore.Click += new System.EventHandler(this.bttn_memStore_Click);
             // 
+            // txt_memPrev
+            // 
+            this.txt_memPrev.Location = new System.Drawing.Point(473, 107);
+            this.txt_memPrev.Name = "txt_memPrev";
+            this.txt_memPrev.ReadOnly = true;
+            this.txt_memPrev.Size = new System.Drawing.Size(75, 20);
+            this.txt_memPrev.TabIndex = 0;
+            this.txt_memPrev.TabStop = false;
+            this.txt_memPrev.WordWrap = false;
+            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +322,7 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.txt_memPrev);
             this.Controls.Add(this.bttn_memStore);
             this.Controls.Add(this.bttn_recal);
             this.Controls.Add(this.rtb_ans);
@@ -373,6 +385,7 @@
         private System.Windows.Forms.RichTextBox rtb_ans;
         private System.Windows.Forms.Button bttn_recal;
         private System.Windows.Forms.Button bttn_memStore;
+        private System.Windows.Forms.TextBox txt_memPrev;
     }
 }
 
