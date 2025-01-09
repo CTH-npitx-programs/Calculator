@@ -193,6 +193,7 @@ namespace Calculator
             memClear = true; //shows memory is not clear, to allow viewing of memory and such
                 //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
             txt_memPrev.Visible = memClear;
+            bttn_recal.Visible = memClear;
             
         }
 
