@@ -11,7 +11,7 @@ namespace Calculator
         float num2 = 0;
         string op = "";
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
-        bool firstnum = false; //flag for if it's the first number
+        bool firstnum = true; //flag for if it's the first number
         string mem = "";
         bool memClear = true; //whether the memory is clear
 
@@ -96,7 +96,8 @@ namespace Calculator
 
             if (rtb_ans.Text == "0" || firstnum)
             {
-                rtb_ans.Text = "";
+                rtb_ans.Text = val;
+                firstnum = false;
             }
             else
             {
