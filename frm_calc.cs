@@ -100,12 +100,10 @@ namespace Calculator
             }
             else
             {
-                rtb_ans.Text += btn.Text;
+                rtb_ans.Text += val;
             };
             // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
             // Button btn = (Button)sender;
-            
-            rtb_ans.Text += btn.Text;
         }
 
         private void op_Click(object sender, EventArgs e)
@@ -192,7 +190,7 @@ namespace Calculator
         {
             mem = rtb_ans.Text;
             txt_memPrev.Text = mem; //shows the stored value in the textbox
-            memClear = false; //shows memory is not clear, to allow viewing of memory and such
+            memClear = true; //shows memory is not clear, to allow viewing of memory and such
                 //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
             txt_memPrev.Visible = memClear;
             
@@ -200,7 +198,10 @@ namespace Calculator
 
         private void bttn_clearMem_Click(object sender, EventArgs e)
         {
-            memClear = true;
+            memClear = false;
+            txt_memPrev.Visible = memClear;
+            bttn_recal.Visible = memClear;
+            mem = "";
         }
     }
 }
