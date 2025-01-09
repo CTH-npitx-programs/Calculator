@@ -15,8 +15,8 @@ namespace Calculator
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCalc());
+            Application.SetCompatibleTextRenderingDefault(true);
+            Application.Run( frmCalc());
         }
     }
 }
