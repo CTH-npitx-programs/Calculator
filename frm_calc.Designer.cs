@@ -326,7 +326,7 @@
             this.bttn_clearMemFast.Text = "Clear Rapid Memory";
             this.bttn_clearMemFast.UseVisualStyleBackColor = false;
             this.bttn_clearMemFast.Visible = false;
-            this.bttn_clearMemFast.Click += new System.EventHandler(this.bttn_clearMem_Click);
+            this.bttn_clearMemFast.Click += new System.EventHandler(this.bttn_clearMemFast_Click);
             // 
             // frmCalc
             // 

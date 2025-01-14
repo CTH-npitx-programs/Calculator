@@ -209,7 +209,7 @@ namespace Calculator
             bttn_clearMemFast.Visible = memClear;
         }
 
-        private void bttn_clearMem_Click(object sender, EventArgs e)
+        private void bttn_clearMemFast_Click(object sender, EventArgs e)
         {
             memClear = false;
             txt_memPrev.Visible = memClear;
