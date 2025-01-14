@@ -15,7 +15,8 @@ namespace Calculator
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(true);
+            // Application.SetCompatibleTextRenderingDefault(false);
+                // false is default, so it's not needed. Kept as a comment for refferences sake. Being true is actually a detriment
             Application.Run(new frmCalc());
         }
     }
