@@ -85,7 +85,7 @@
             // txt_debug
             // 
             this.txt_debug.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.txt_debug.Location = new System.Drawing.Point(846, 1);
+            this.txt_debug.Location = new System.Drawing.Point(913, 1);
             this.txt_debug.Multiline = true;
             this.txt_debug.Name = "txt_debug";
             this.txt_debug.ReadOnly = true;
@@ -286,22 +286,22 @@
             // 
             // bttn_recal
             // 
-            this.bttn_recal.Location = new System.Drawing.Point(149, 278);
+            this.bttn_recal.Location = new System.Drawing.Point(149, 307);
             this.bttn_recal.Name = "bttn_recal";
-            this.bttn_recal.Size = new System.Drawing.Size(75, 23);
+            this.bttn_recal.Size = new System.Drawing.Size(156, 23);
             this.bttn_recal.TabIndex = 21;
-            this.bttn_recal.Text = "Recall";
+            this.bttn_recal.Text = "Recall Rapid Memory";
             this.bttn_recal.UseVisualStyleBackColor = true;
             this.bttn_recal.Visible = false;
             this.bttn_recal.Click += new System.EventHandler(this.bttn_num_Click);
             // 
             // bttn_memStore
             // 
-            this.bttn_memStore.Location = new System.Drawing.Point(68, 278);
+            this.bttn_memStore.Location = new System.Drawing.Point(311, 307);
             this.bttn_memStore.Name = "bttn_memStore";
-            this.bttn_memStore.Size = new System.Drawing.Size(75, 23);
+            this.bttn_memStore.Size = new System.Drawing.Size(156, 23);
             this.bttn_memStore.TabIndex = 22;
-            this.bttn_memStore.Text = "Store";
+            this.bttn_memStore.Text = "Store Rapid Memory";
             this.bttn_memStore.UseVisualStyleBackColor = true;
             this.bttn_memStore.Visible = false;
             this.bttn_memStore.Click += new System.EventHandler(this.bttn_memStore_Click);
@@ -323,7 +323,7 @@
             this.bttn_clearMem.Name = "bttn_clearMem";
             this.bttn_clearMem.Size = new System.Drawing.Size(124, 23);
             this.bttn_clearMem.TabIndex = 23;
-            this.bttn_clearMem.Text = "Clear Memory";
+            this.bttn_clearMem.Text = "Clear Rapid Memory";
             this.bttn_clearMem.UseVisualStyleBackColor = false;
             this.bttn_clearMem.Visible = false;
             this.bttn_clearMem.Click += new System.EventHandler(this.bttn_clearMem_Click);
