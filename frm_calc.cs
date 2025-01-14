@@ -196,7 +196,7 @@ namespace Calculator
             txt_memPrev.Visible = memClear;
             bttn_recal.Visible = memClear;
             bttn_clear.Visible = memClear;
-            
+            bttn_clearMem.Visible = memClear;
         }
 
         private void bttn_clearMem_Click(object sender, EventArgs e)
@@ -204,7 +204,7 @@ namespace Calculator
             memClear = false;
             txt_memPrev.Visible = memClear;
             bttn_recal.Visible = memClear;
-            bttn_clear.Visible = memClear;
+            bttn_clearMem.Visible = memClear;
             mem = "";
         }
     }
