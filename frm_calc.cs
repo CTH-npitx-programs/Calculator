@@ -88,9 +88,11 @@ namespace Calculator
         {
             Button btn = sender as Button;
             string val = btn.Text;
+            bool recall = false;
             if (val == bttn_recal.Text)
             {
                 val = mem;
+                recall = true;
             }
 
 
@@ -102,6 +104,14 @@ namespace Calculator
             else
             {
                 rtb_ans.Text += val;
+                if ( recall )
+                {
+                    rtb_ans.Text = val; //as recalled from memory, set to value from memory
+                }
+                else 
+                {
+                    rtb_ans.Text += val; //add entry to text
+                }
             };
             // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
             // Button btn = (Button)sender;
