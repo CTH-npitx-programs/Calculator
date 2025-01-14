@@ -51,10 +51,10 @@
             this.bttn_clearEvery = new System.Windows.Forms.Button();
             this.bttn_0 = new System.Windows.Forms.Button();
             this.rtb_ans = new System.Windows.Forms.RichTextBox();
-            this.bttn_recal = new System.Windows.Forms.Button();
-            this.bttn_memStore = new System.Windows.Forms.Button();
+            this.bttn_recalFast = new System.Windows.Forms.Button();
+            this.bttn_memStoreFast = new System.Windows.Forms.Button();
             this.txt_memPrev = new System.Windows.Forms.TextBox();
-            this.bttn_clearMem = new System.Windows.Forms.Button();
+            this.bttn_clearMemFast = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -284,27 +284,27 @@
             this.rtb_ans.Text = "0";
             this.rtb_ans.TextChanged += new System.EventHandler(this.rtb_ans_TextChanged);
             // 
-            // bttn_recal
+            // bttn_recalFast
             // 
-            this.bttn_recal.Location = new System.Drawing.Point(149, 307);
-            this.bttn_recal.Name = "bttn_recal";
-            this.bttn_recal.Size = new System.Drawing.Size(156, 23);
-            this.bttn_recal.TabIndex = 21;
-            this.bttn_recal.Text = "Recall Rapid Memory";
-            this.bttn_recal.UseVisualStyleBackColor = true;
-            this.bttn_recal.Visible = false;
-            this.bttn_recal.Click += new System.EventHandler(this.bttn_num_Click);
+            this.bttn_recalFast.Location = new System.Drawing.Point(149, 307);
+            this.bttn_recalFast.Name = "bttn_recalFast";
+            this.bttn_recalFast.Size = new System.Drawing.Size(156, 23);
+            this.bttn_recalFast.TabIndex = 21;
+            this.bttn_recalFast.Text = "Recall Rapid Memory";
+            this.bttn_recalFast.UseVisualStyleBackColor = true;
+            this.bttn_recalFast.Visible = false;
+            this.bttn_recalFast.Click += new System.EventHandler(this.bttn_num_Click);
             // 
-            // bttn_memStore
+            // bttn_memStoreFast
             // 
-            this.bttn_memStore.Location = new System.Drawing.Point(311, 307);
-            this.bttn_memStore.Name = "bttn_memStore";
-            this.bttn_memStore.Size = new System.Drawing.Size(156, 23);
-            this.bttn_memStore.TabIndex = 22;
-            this.bttn_memStore.Text = "Store Rapid Memory";
-            this.bttn_memStore.UseVisualStyleBackColor = true;
-            this.bttn_memStore.Visible = false;
-            this.bttn_memStore.Click += new System.EventHandler(this.bttn_memStore_Click);
+            this.bttn_memStoreFast.Location = new System.Drawing.Point(311, 307);
+            this.bttn_memStoreFast.Name = "bttn_memStoreFast";
+            this.bttn_memStoreFast.Size = new System.Drawing.Size(156, 23);
+            this.bttn_memStoreFast.TabIndex = 22;
+            this.bttn_memStoreFast.Text = "Store Rapid Memory";
+            this.bttn_memStoreFast.UseVisualStyleBackColor = true;
+            this.bttn_memStoreFast.Visible = false;
+            this.bttn_memStoreFast.Click += new System.EventHandler(this.bttn_memStore_Click);
             // 
             // txt_memPrev
             // 
@@ -317,16 +317,16 @@
             this.txt_memPrev.Visible = false;
             this.txt_memPrev.WordWrap = false;
             // 
-            // bttn_clearMem
+            // bttn_clearMemFast
             // 
-            this.bttn_clearMem.Location = new System.Drawing.Point(19, 162);
-            this.bttn_clearMem.Name = "bttn_clearMem";
-            this.bttn_clearMem.Size = new System.Drawing.Size(124, 23);
-            this.bttn_clearMem.TabIndex = 23;
-            this.bttn_clearMem.Text = "Clear Rapid Memory";
-            this.bttn_clearMem.UseVisualStyleBackColor = false;
-            this.bttn_clearMem.Visible = false;
-            this.bttn_clearMem.Click += new System.EventHandler(this.bttn_clearMem_Click);
+            this.bttn_clearMemFast.Location = new System.Drawing.Point(19, 162);
+            this.bttn_clearMemFast.Name = "bttn_clearMemFast";
+            this.bttn_clearMemFast.Size = new System.Drawing.Size(124, 23);
+            this.bttn_clearMemFast.TabIndex = 23;
+            this.bttn_clearMemFast.Text = "Clear Rapid Memory";
+            this.bttn_clearMemFast.UseVisualStyleBackColor = false;
+            this.bttn_clearMemFast.Visible = false;
+            this.bttn_clearMemFast.Click += new System.EventHandler(this.bttn_clearMem_Click);
             // 
             // frmCalc
             // 
@@ -336,10 +336,10 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
-            this.Controls.Add(this.bttn_clearMem);
+            this.Controls.Add(this.bttn_clearMemFast);
             this.Controls.Add(this.txt_memPrev);
-            this.Controls.Add(this.bttn_memStore);
-            this.Controls.Add(this.bttn_recal);
+            this.Controls.Add(this.bttn_memStoreFast);
+            this.Controls.Add(this.bttn_recalFast);
             this.Controls.Add(this.rtb_ans);
             this.Controls.Add(this.bttn_0);
             this.Controls.Add(this.bttn_clearEvery);
@@ -398,10 +398,10 @@
         private System.Windows.Forms.Button bttn_clearEvery;
         private System.Windows.Forms.Button bttn_0;
         private System.Windows.Forms.RichTextBox rtb_ans;
-        private System.Windows.Forms.Button bttn_recal;
-        private System.Windows.Forms.Button bttn_memStore;
+        private System.Windows.Forms.Button bttn_recalFast;
+        private System.Windows.Forms.Button bttn_memStoreFast;
         private System.Windows.Forms.TextBox txt_memPrev;
-        private System.Windows.Forms.Button bttn_clearMem;
+        private System.Windows.Forms.Button bttn_clearMemFast;
     }
 }
 

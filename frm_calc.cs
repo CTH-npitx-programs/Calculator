@@ -89,7 +89,7 @@ namespace Calculator
             Button btn = sender as Button;
             string val = btn.Text;
             bool recall = false;
-            if (val == bttn_recal.Text)
+            if (val == bttn_recalFast.Text)
             {
                 val = mem;
                 recall = true;
@@ -190,10 +190,10 @@ namespace Calculator
             string content = rtb_ans.Text;
             if (content == "0" || content == "")
             {
-                bttn_memStore.Visible = false;
+                bttn_memStoreFast.Visible = false;
             } else
             {
-                bttn_memStore.Visible = true;
+                bttn_memStoreFast.Visible = true;
             }
         }
 
@@ -204,17 +204,17 @@ namespace Calculator
             memClear = true; //shows memory is not clear, to allow viewing of memory and such
                 //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
             txt_memPrev.Visible = memClear;
-            bttn_recal.Visible = memClear;
+            bttn_recalFast.Visible = memClear;
             bttn_clear.Visible = memClear;
-            bttn_clearMem.Visible = memClear;
+            bttn_clearMemFast.Visible = memClear;
         }
 
         private void bttn_clearMem_Click(object sender, EventArgs e)
         {
             memClear = false;
             txt_memPrev.Visible = memClear;
-            bttn_recal.Visible = memClear;
-            bttn_clearMem.Visible = memClear;
+            bttn_recalFast.Visible = memClear;
+            bttn_clearMemFast.Visible = memClear;
             mem = "";
         }
     }
