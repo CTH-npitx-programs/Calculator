@@ -1,0 +1,4 @@
+this design ends up making the an assuming for setting "mem clear". that could cause issues in the future, especially with some of the other planned additions. Be warned
+Also uses an inversion in 1 location, but hardcoded elsewhere. Major possible flaw, fix?
+
+future plan: utilize functions?
