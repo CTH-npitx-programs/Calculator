@@ -11,7 +11,10 @@ namespace Calculator
         float num2 = 0;
         string op = "";
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
-        bool firstnum = false; //flag for if it's the first number
+        bool firstnum = true; //flag for if it's the first number
+        string mem = "";
+        bool memClear = true; //whether the memory is clear
+
         public frmCalc()
         {
             InitializeComponent();
@@ -37,6 +40,7 @@ namespace Calculator
             addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
+            memClear = !memClear; //invert it, as the useage makes it such that the variable should be inverse. Another possible flaw, fix?
         }
 
         const string closeText = "Close";
@@ -63,9 +67,9 @@ namespace Calculator
                 bttnClose.Text = confirmText;
             }
             else {
-                Application.Exit();
+                Application.Exit(); //exit
             } // close
-            tmr_ConfirmClose.Start();
+            tmr_ConfirmClose.Start(); //timer to allow confirmation
             
         }
 
@@ -83,19 +87,34 @@ namespace Calculator
         private void bttn_num_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
+            string val = btn.Text;
+            bool recall = false;
+            if (val == bttn_recal.Text)
+            {
+                val = mem;
+                recall = true;
+            }
+
 
             if (rtb_ans.Text == "0" || firstnum)
             {
-                rtb_ans.Text = "";
+                rtb_ans.Text = val;
+                firstnum = false;
             }
             else
             {
-                rtb_ans.Text += btn.Text;
+                rtb_ans.Text += val;
+                if ( recall )
+                {
+                    rtb_ans.Text = val; //as recalled from memory, set to value from memory
+                }
+                else 
+                {
+                    rtb_ans.Text += val; //add entry to text
+                }
             };
             // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
             // Button btn = (Button)sender;
-            
-            rtb_ans.Text += btn.Text;
         }
 
         private void op_Click(object sender, EventArgs e)
@@ -164,6 +183,39 @@ namespace Calculator
             num2 = 0;
             op = "";
             firstnum = true;
+        }
+
+        private void rtb_ans_TextChanged(object sender, EventArgs e)
+        {
+            string content = rtb_ans.Text;
+            if (content == "0" || content == "")
+            {
+                bttn_memStore.Visible = false;
+            } else
+            {
+                bttn_memStore.Visible = true;
+            }
+        }
+
+        private void bttn_memStore_Click(object sender, EventArgs e)
+        {
+            mem = rtb_ans.Text;
+            txt_memPrev.Text = mem; //shows the stored value in the textbox
+            memClear = true; //shows memory is not clear, to allow viewing of memory and such
+                //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
+            txt_memPrev.Visible = memClear;
+            bttn_recal.Visible = memClear;
+            bttn_clear.Visible = memClear;
+            bttn_clearMem.Visible = memClear;
+        }
+
+        private void bttn_clearMem_Click(object sender, EventArgs e)
+        {
+            memClear = false;
+            txt_memPrev.Visible = memClear;
+            bttn_recal.Visible = memClear;
+            bttn_clearMem.Visible = memClear;
+            mem = "";
         }
     }
 }
