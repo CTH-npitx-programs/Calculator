@@ -204,7 +204,7 @@ namespace Calculator
             memClear = false;
             txt_memPrev.Visible = memClear;
             bttn_recal.Visible = memClear;
-            bttn_clear.Visible = memclear;
+            bttn_clear.Visible = memClear;
             mem = "";
         }
     }
