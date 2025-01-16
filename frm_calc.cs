@@ -197,7 +197,7 @@ namespace Calculator
             }
         }
 
-        private void bttn_memFastStore_Click(object sender, EventArgs e)
+        private void bttn_memStore_Click(object sender, EventArgs e)
         {
             mem = rtb_ans.Text;
             txt_memPrev.Text = mem; //shows the stored value in the textbox
