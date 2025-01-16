@@ -200,10 +200,10 @@ namespace Calculator
         private void bttn_memStore_Click(object sender, EventArgs e)
         {
             mem = rtb_ans.Text;
-            txt_memPrev.Text = mem; //shows the stored value in the textbox
+            txt_memFastPre.Text = mem; //shows the stored value in the textbox
             memClear = true; //shows memory is not clear, to allow viewing of memory and such
                 //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
-            txt_memPrev.Visible = memClear;
+            txt_memFastPre.Visible = memClear;
             bttn_recalFast.Visible = memClear;
             bttn_clear.Visible = memClear;
             bttn_clearMemFast.Visible = memClear;
@@ -212,7 +212,7 @@ namespace Calculator
         private void bttn_clearMemFast_Click(object sender, EventArgs e)
         {
             memClear = false;
-            txt_memPrev.Visible = memClear;
+            txt_memFastPre.Visible = memClear;
             bttn_recalFast.Visible = memClear;
             bttn_clearMemFast.Visible = memClear;
             mem = "";
