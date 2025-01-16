@@ -59,7 +59,7 @@ namespace Calculator
             txt_debug.AppendText(item);
             txt_debug.AppendText(empty);
             return txt_debug.Text.ToString();
-        }
+        } //debug text boxes
         private void bttnClose_Click(object sender, EventArgs e)
         {
             if ( bttnClose.Text == closeText) // next name
@@ -71,18 +71,18 @@ namespace Calculator
             } // close
             tmr_ConfirmClose.Start(); //timer to allow confirmation
             
-        }
+        } //close after confirm
 
         private void txt_debug_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        } //if change in debug text
 
         private void tmr_ConfirmClose_Tick(object sender, EventArgs e)
         {
             tmr_ConfirmClose.Stop();
             bttnClose.Text = closeText;
-        }
+        } //when you hit close, this timer will change the text for 3 seconds. if you hit the button within those 3 seconds the application closes
 
         private void bttn_num_Click(object sender, EventArgs e)
         {
@@ -114,7 +114,7 @@ namespace Calculator
             };
             // also the following works (but sometimes it works in cases like strings to integers. Sometimes it works, sometimes it doesn't.
             // Button btn = (Button)sender;
-        }
+        } //input numbers
 
         private void op_Click(object sender, EventArgs e)
         {
@@ -124,7 +124,7 @@ namespace Calculator
             rtb_ans.Text = "0"; //set to 0 as after hitting operator you need 0, si?
             firstnum = false;
 
-        }
+        } //add operators
 
         private void clear_click(object sender, EventArgs e)
         {
@@ -137,7 +137,7 @@ namespace Calculator
             } 
             rtb_ans.Text = "0";
             firstnum = false;
-        }
+        } //clear equation
 
         private void bttn_equal_Click(object sender, EventArgs e)
         {
@@ -182,7 +182,7 @@ namespace Calculator
             num2 = 0;
             op = "";
             firstnum = true;
-        }
+        } //equals button
 
         private void rtb_ans_TextChanged(object sender, EventArgs e)
         {
@@ -194,19 +194,19 @@ namespace Calculator
             {
                 bttn_memStoreFast.Visible = true;
             }
-        }
+        } //controll systems based on the answer changeing
 
         private void bttn_memStoreFast_Click(object sender, EventArgs e)
         {
             mem = rtb_ans.Text;
             txt_memFastPrev.Text = mem; //shows the stored value in the textbox
             memClear = true; //shows memory is not clear, to allow viewing of memory and such
-                             //one falw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
+                             //one flaw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
             txt_memFastPrev.Visible = memClear;
             bttn_recalFast.Visible = memClear;
             bttn_clear.Visible = memClear;
             bttn_clearMemFast.Visible = memClear;
-        }
+        } //store code in fast mem
 
         private void bttn_clearMemFast_Click(object sender, EventArgs e)
         {
@@ -215,7 +215,7 @@ namespace Calculator
             bttn_recalFast.Visible = memClear;
             bttn_clearMemFast.Visible = memClear;
             mem = "";
-        }
+        } //clear the rapid mem
 
     }
 }
