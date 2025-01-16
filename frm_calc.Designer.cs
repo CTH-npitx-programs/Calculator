@@ -55,6 +55,7 @@
             this.bttn_memStoreFast = new System.Windows.Forms.Button();
             this.txt_memFastPrev = new System.Windows.Forms.TextBox();
             this.bttn_clearMemFast = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -328,6 +329,14 @@
             this.bttn_clearMemFast.Visible = false;
             this.bttn_clearMemFast.Click += new System.EventHandler(this.bttn_clearMemFast_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(787, 1);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 24;
+            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +345,7 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bttn_clearMemFast);
             this.Controls.Add(this.txt_memFastPrev);
             this.Controls.Add(this.bttn_memStoreFast);
@@ -402,6 +412,7 @@
         private System.Windows.Forms.Button bttn_memStoreFast;
         private System.Windows.Forms.TextBox txt_memFastPrev;
         private System.Windows.Forms.Button bttn_clearMemFast;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
