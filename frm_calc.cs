@@ -103,7 +103,6 @@ namespace Calculator
             }
             else
             {
-                rtb_ans.Text += val;
                 if ( recall )
                 {
                     rtb_ans.Text = val; //as recalled from memory, set to value from memory
