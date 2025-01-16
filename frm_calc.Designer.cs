@@ -53,7 +53,7 @@
             this.rtb_ans = new System.Windows.Forms.RichTextBox();
             this.bttn_recalFast = new System.Windows.Forms.Button();
             this.bttn_memStoreFast = new System.Windows.Forms.Button();
-            this.txt_memFastPre = new System.Windows.Forms.TextBox();
+            this.txt_memFastPrev = new System.Windows.Forms.TextBox();
             this.bttn_clearMemFast = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -306,16 +306,16 @@
             this.bttn_memStoreFast.Visible = false;
             this.bttn_memStoreFast.Click += new System.EventHandler(this.bttn_memStore_Click);
             // 
-            // txt_memFastPre
+            // txt_memFastPrev
             // 
-            this.txt_memFastPre.Location = new System.Drawing.Point(149, 109);
-            this.txt_memFastPre.Name = "txt_memFastPre";
-            this.txt_memFastPre.ReadOnly = true;
-            this.txt_memFastPre.Size = new System.Drawing.Size(75, 20);
-            this.txt_memFastPre.TabIndex = 0;
-            this.txt_memFastPre.TabStop = false;
-            this.txt_memFastPre.Visible = false;
-            this.txt_memFastPre.WordWrap = false;
+            this.txt_memFastPrev.Location = new System.Drawing.Point(149, 109);
+            this.txt_memFastPrev.Name = "txt_memFastPrev";
+            this.txt_memFastPrev.ReadOnly = true;
+            this.txt_memFastPrev.Size = new System.Drawing.Size(75, 20);
+            this.txt_memFastPrev.TabIndex = 0;
+            this.txt_memFastPrev.TabStop = false;
+            this.txt_memFastPrev.Visible = false;
+            this.txt_memFastPrev.WordWrap = false;
             // 
             // bttn_clearMemFast
             // 
@@ -337,7 +337,7 @@
             this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
             this.Controls.Add(this.bttn_clearMemFast);
-            this.Controls.Add(this.txt_memFastPre);
+            this.Controls.Add(this.txt_memFastPrev);
             this.Controls.Add(this.bttn_memStoreFast);
             this.Controls.Add(this.bttn_recalFast);
             this.Controls.Add(this.rtb_ans);
@@ -400,7 +400,7 @@
         private System.Windows.Forms.RichTextBox rtb_ans;
         private System.Windows.Forms.Button bttn_recalFast;
         private System.Windows.Forms.Button bttn_memStoreFast;
-        private System.Windows.Forms.TextBox txt_memFastPre;
+        private System.Windows.Forms.TextBox txt_memFastPrev;
         private System.Windows.Forms.Button bttn_clearMemFast;
     }
 }
