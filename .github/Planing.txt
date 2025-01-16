@@ -2,5 +2,6 @@ Create Plans/ flowcharts
 
 current plans: 4 function (complete)
 5 function- modulus (complete)
+Memory
 
 convert to RPN
