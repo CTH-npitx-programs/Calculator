@@ -304,7 +304,7 @@
             this.bttn_memStoreFast.Text = "Store Rapid Memory";
             this.bttn_memStoreFast.UseVisualStyleBackColor = true;
             this.bttn_memStoreFast.Visible = false;
-            this.bttn_memStoreFast.Click += new System.EventHandler(this.bttn_memStore_Click);
+            this.bttn_memStoreFast.Click += new System.EventHandler(this.bttn_memStoreFast_Click);
             // 
             // txt_memFastPrev
             // 
