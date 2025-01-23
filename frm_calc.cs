@@ -10,10 +10,11 @@ namespace Calculator
         float num1 = 0;
         float num2 = 0;
         string op = "";
+        string mem = "";
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
         bool firstnum = true; //flag for if it's the first number
-        string mem = "";
-        bool memClear = true; //whether the memory is clear
+        string rapidMem = "";
+        bool rapidMemClear = true; //whether the memory is clear
 
         public frmCalc()
         {
@@ -40,7 +41,7 @@ namespace Calculator
             addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
-            memClear = !memClear; //invert it, as the useage makes it such that the variable should be inverse. Another possible flaw, fix?
+            rapidMemClear = !rapidMemClear; //invert it, as the useage makes it such that the variable should be inverse. Another possible flaw, fix?
         }
 
         const string closeText = "Close";
@@ -91,7 +92,7 @@ namespace Calculator
             bool recall = false;
             if (val == bttn_recalFast.Text)
             {
-                val = mem;
+                val = rapidMem;
                 recall = true;
             }
 
@@ -178,6 +179,7 @@ namespace Calculator
                     }
          
             }
+            
             num1 = 0;
             num2 = 0;
             op = "";
@@ -198,24 +200,28 @@ namespace Calculator
 
         private void bttn_memStoreFast_Click(object sender, EventArgs e)
         {
-            mem = rtb_ans.Text;
-            txt_memFastPrev.Text = mem; //shows the stored value in the textbox
-            memClear = true; //shows memory is not clear, to allow viewing of memory and such
+            rapidMem = rtb_ans.Text;
+            txt_memFastPrev.Text = rapidMem; //shows the stored value in the textbox
+            rapidMemClear = true; //shows memory is not clear, to allow viewing of memory and such
                              //one flaw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
-            txt_memFastPrev.Visible = memClear;
-            bttn_recalFast.Visible = memClear;
-            bttn_clear.Visible = memClear;
-            bttn_clearMemFast.Visible = memClear;
+            txt_memFastPrev.Visible = rapidMemClear;
+            bttn_recalFast.Visible = rapidMemClear;
+            bttn_clear.Visible = rapidMemClear;
+            bttn_clearMemFast.Visible = rapidMemClear;
         } //store code in fast mem
 
         private void bttn_clearMemFast_Click(object sender, EventArgs e)
         {
-            memClear = false;
-            txt_memFastPrev.Visible = memClear;
-            bttn_recalFast.Visible = memClear;
-            bttn_clearMemFast.Visible = memClear;
-            mem = "";
+            rapidMemClear = false;
+            txt_memFastPrev.Visible = rapidMemClear;
+            bttn_recalFast.Visible = rapidMemClear;
+            bttn_clearMemFast.Visible = rapidMemClear;
+            rapidMem = "";
         } //clear the rapid mem
 
+        private void lst_memFull_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
