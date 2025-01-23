@@ -122,6 +122,7 @@ namespace Calculator
             Button btn = sender as Button;
             op = btn.Text;
             num1 = float.Parse(rtb_ans.Text);
+            mem = rtb_ans.Text + op;
             rtb_ans.Text = "0"; //set to 0 as after hitting operator you need 0, si?
             firstnum = false;
 
@@ -143,6 +144,7 @@ namespace Calculator
         private void bttn_equal_Click(object sender, EventArgs e)
         {
             num2 = float.Parse(rtb_ans.Text);
+            mem += rtb_ans.Text;
 
             switch ( op ) //runs only exact kinda like an if and an equal, with in-built if-else
             {
@@ -179,7 +181,12 @@ namespace Calculator
                     }
          
             }
+
             
+            mem += "="+rtb_ans.Text;
+            lst_memFull.Items.Add(mem);
+
+            mem = "";
             num1 = 0;
             num2 = 0;
             op = "";
