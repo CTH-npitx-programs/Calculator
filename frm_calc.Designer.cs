@@ -48,7 +48,7 @@
             this.bttn_div = new System.Windows.Forms.Button();
             this.bttn_mod = new System.Windows.Forms.Button();
             this.bttn_clear = new System.Windows.Forms.Button();
-            this.bttn_clearEvery = new System.Windows.Forms.Button();
+            this.bttn_clearAll = new System.Windows.Forms.Button();
             this.bttn_0 = new System.Windows.Forms.Button();
             this.rtb_ans = new System.Windows.Forms.RichTextBox();
             this.bttn_recalFast = new System.Windows.Forms.Button();
@@ -256,15 +256,15 @@
             this.bttn_clear.UseVisualStyleBackColor = false;
             this.bttn_clear.Click += new System.EventHandler(this.clear_click);
             // 
-            // bttn_clearEvery
+            // bttn_clearAll
             // 
-            this.bttn_clearEvery.Location = new System.Drawing.Point(230, 162);
-            this.bttn_clearEvery.Name = "bttn_clearEvery";
-            this.bttn_clearEvery.Size = new System.Drawing.Size(156, 23);
-            this.bttn_clearEvery.TabIndex = 18;
-            this.bttn_clearEvery.Text = "Clear Equation";
-            this.bttn_clearEvery.UseVisualStyleBackColor = false;
-            this.bttn_clearEvery.Click += new System.EventHandler(this.clear_click);
+            this.bttn_clearAll.Location = new System.Drawing.Point(230, 162);
+            this.bttn_clearAll.Name = "bttn_clearAll";
+            this.bttn_clearAll.Size = new System.Drawing.Size(156, 23);
+            this.bttn_clearAll.TabIndex = 18;
+            this.bttn_clearAll.Text = "Clear All";
+            this.bttn_clearAll.UseVisualStyleBackColor = false;
+            this.bttn_clearAll.Click += new System.EventHandler(this.clear_click);
             // 
             // bttn_0
             // 
@@ -353,7 +353,7 @@
             this.Controls.Add(this.bttn_recalFast);
             this.Controls.Add(this.rtb_ans);
             this.Controls.Add(this.bttn_0);
-            this.Controls.Add(this.bttn_clearEvery);
+            this.Controls.Add(this.bttn_clearAll);
             this.Controls.Add(this.bttn_clear);
             this.Controls.Add(this.bttn_mod);
             this.Controls.Add(this.bttn_div);
@@ -406,7 +406,7 @@
         private System.Windows.Forms.Button bttn_div;
         private System.Windows.Forms.Button bttn_mod;
         private System.Windows.Forms.Button bttn_clear;
-        private System.Windows.Forms.Button bttn_clearEvery;
+        private System.Windows.Forms.Button bttn_clearAll;
         private System.Windows.Forms.Button bttn_0;
         private System.Windows.Forms.RichTextBox rtb_ans;
         private System.Windows.Forms.Button bttn_recalFast;

@@ -131,13 +131,20 @@ namespace Calculator
         private void clear_click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if (btn.Text == "Clear Equation") //ensure it's clear equation (no operators, both nums are 0, 0 as answer)
+
+
+            num1 = 0; //these three lines clear all the numbers
+            num2 = 0;
+            op = "";
+
+            rtb_ans.Text = "0"; //set answer to 0
+
+            if (btn.Text == "Clear All") //check if it's clear all, if so wipe both memories as well
             {
-                num1 = 0;
-                num2 = 0;
-                op = "";
-            } 
-            rtb_ans.Text = "0";
+                lst_memFull.Items.Clear(); //clear full memory
+                rapidMem = ""; //clear rapid mem
+                rapidMemClear = false; //set clear to say it is clear (due to convoluted reasons the boolean is inverted)
+            }
             firstnum = false;
         } //clear equation
 
