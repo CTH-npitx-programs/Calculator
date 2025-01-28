@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -10,10 +11,13 @@ namespace Calculator
         float num1 = 0;
         float num2 = 0;
         string op = "";
+        string mem = "";
         const string divError = "This is a very complex question. Many people say it's undefinined, but what is that? Well, it can also be considered indeterminent, but that's just the begining. There are many odd results when you get to the smallest part";
         bool firstnum = true; //flag for if it's the first number
-        string mem = "";
-        bool memClear = true; //whether the memory is clear
+        string rapidMem = "";
+        bool rapidMemClear = true; //whether the memory is clear
+        string memFull = "";
+        
 
         public frmCalc()
         {
@@ -40,7 +44,7 @@ namespace Calculator
             addItem(debug.ToString(),false); //debug mode?
             addItem(closeText, true); //close text
             addItem(confirmClose, false); //confirm close
-            memClear = !memClear; //invert it, as the useage makes it such that the variable should be inverse. Another possible flaw, fix?
+            rapidMemClear = !rapidMemClear; //invert it, as the useage makes it such that the variable should be inverse. Another possible flaw, fix?
         }
 
         const string closeText = "Close";
@@ -91,7 +95,7 @@ namespace Calculator
             bool recall = false;
             if (val == bttn_recalFast.Text)
             {
-                val = mem;
+                val = rapidMem;
                 recall = true;
             }
 
@@ -107,8 +111,10 @@ namespace Calculator
                 {
                     rtb_ans.Text = val; //as recalled from memory, set to value from memory
                 }
-                else 
+                else if (btn.Text == bttn_recalFull.Text) //as recalled from full memory, set
                 {
+                    rtb_ans.Text = txt_previewFull.Text;
+                } else {
                     rtb_ans.Text += val; //add entry to text
                 }
             };
@@ -121,6 +127,7 @@ namespace Calculator
             Button btn = sender as Button;
             op = btn.Text;
             num1 = float.Parse(rtb_ans.Text);
+            mem = rtb_ans.Text + op;
             rtb_ans.Text = "0"; //set to 0 as after hitting operator you need 0, si?
             firstnum = false;
 
@@ -129,19 +136,27 @@ namespace Calculator
         private void clear_click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if (btn.Text == "Clear Equation") //ensure it's clear equation (no operators, both nums are 0, 0 as answer)
+
+
+            num1 = 0; //these three lines clear all the numbers
+            num2 = 0;
+            op = "";
+
+            rtb_ans.Text = "0"; //set answer to 0
+
+            if (btn.Text == "Clear All") //check if it's clear all, if so wipe both memories as well
             {
-                num1 = 0;
-                num2 = 0;
-                op = "";
-            } 
-            rtb_ans.Text = "0";
+                lst_memFull.Items.Clear(); //clear full memory
+                rapidMem = ""; //clear rapid mem
+                rapidMemClear = false; //set clear to say it is clear (due to convoluted reasons the boolean is inverted)
+            }
             firstnum = false;
         } //clear equation
 
         private void bttn_equal_Click(object sender, EventArgs e)
         {
             num2 = float.Parse(rtb_ans.Text);
+            mem += rtb_ans.Text;
 
             switch ( op ) //runs only exact kinda like an if and an equal, with in-built if-else
             {
@@ -178,6 +193,12 @@ namespace Calculator
                     }
          
             }
+
+            
+            mem += "="+rtb_ans.Text;
+            lst_memFull.Items.Add(mem);
+
+            mem = "";
             num1 = 0;
             num2 = 0;
             op = "";
@@ -198,24 +219,39 @@ namespace Calculator
 
         private void bttn_memStoreFast_Click(object sender, EventArgs e)
         {
-            mem = rtb_ans.Text;
-            txt_memFastPrev.Text = mem; //shows the stored value in the textbox
-            memClear = true; //shows memory is not clear, to allow viewing of memory and such
+            rapidMem = rtb_ans.Text;
+            txt_memFastPrev.Text = rapidMem; //shows the stored value in the textbox
+            rapidMemClear = true; //shows memory is not clear, to allow viewing of memory and such
                              //one flaw: it assumes that this button requires you to be adding to memory. With future design, that could be issue
-            txt_memFastPrev.Visible = memClear;
-            bttn_recalFast.Visible = memClear;
-            bttn_clear.Visible = memClear;
-            bttn_clearMemFast.Visible = memClear;
+            txt_memFastPrev.Visible = rapidMemClear;
+            bttn_recalFast.Visible = rapidMemClear;
+            bttn_clear.Visible = rapidMemClear;
+            bttn_clearMemFast.Visible = rapidMemClear;
         } //store code in fast mem
 
         private void bttn_clearMemFast_Click(object sender, EventArgs e)
         {
-            memClear = false;
-            txt_memFastPrev.Visible = memClear;
-            bttn_recalFast.Visible = memClear;
-            bttn_clearMemFast.Visible = memClear;
-            mem = "";
+            rapidMemClear = false;
+            txt_memFastPrev.Visible = rapidMemClear;
+            bttn_recalFast.Visible = rapidMemClear;
+            bttn_clearMemFast.Visible = rapidMemClear;
+            rapidMem = "";
         } //clear the rapid mem
 
+        private void lst_memFull_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int position = lst_memFull.SelectedIndex;  //get intex
+            memFull = lst_memFull.SelectedItem.ToString(); //get selected item, to manipulate to get the correct item
+            var memItems = memFull.Split('=').ToList();
+            position = memItems.Count; //posistion is also used to find where the equals sign is
+            memFull = memItems[position-1];
+            txt_previewFull.Text = memFull; //set preview box
+            
+        }
+
+        private void txt_previewFull_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
