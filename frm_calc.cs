@@ -237,8 +237,10 @@ namespace Calculator
 
         private void lst_memFull_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = lst_memFull.SelectedIndex;
-            memFull = lst_memFull.SelectedItem.ToString();
+            int index = lst_memFull.SelectedIndex;  //get intex
+            memFull = lst_memFull.SelectedItem.ToString(); //get selected item, to manipulate to get the correct item
+            var memItems = memFull.Split('=');
+            memFull = memItems.Length.ToString();
             txt_previewFull.Text = memFull;
         }
 
