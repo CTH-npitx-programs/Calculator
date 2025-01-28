@@ -15,7 +15,7 @@ namespace Calculator
         bool firstnum = true; //flag for if it's the first number
         string rapidMem = "";
         bool rapidMemClear = true; //whether the memory is clear
-        int selectedMem = 0;
+        string memFull = "";
         
 
         public frmCalc()
@@ -237,7 +237,9 @@ namespace Calculator
 
         private void lst_memFull_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedMem = lst_memFull.SelectedIndex;
+            int index = lst_memFull.SelectedIndex;
+            memFull = lst_memFull.SelectedItem.ToString();
+            txt_previewFull.Text = memFull;
         }
 
         private void txt_previewFull_TextChanged(object sender, EventArgs e)
