@@ -49,13 +49,15 @@
             this.bttn_mod = new System.Windows.Forms.Button();
             this.bttn_clear = new System.Windows.Forms.Button();
             this.bttn_clearAll = new System.Windows.Forms.Button();
-            this.bttn_0 = new System.Windows.Forms.Button();
             this.rtb_ans = new System.Windows.Forms.RichTextBox();
             this.bttn_recalFast = new System.Windows.Forms.Button();
             this.bttn_memStoreFast = new System.Windows.Forms.Button();
             this.txt_memFastPrev = new System.Windows.Forms.TextBox();
             this.bttn_clearMemFast = new System.Windows.Forms.Button();
             this.lst_memFull = new System.Windows.Forms.ListBox();
+            this.bttn_0 = new System.Windows.Forms.Button();
+            this.bttn_recalFull = new System.Windows.Forms.Button();
+            this.txt_previewFull = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttnClose
@@ -266,16 +268,6 @@
             this.bttn_clearAll.UseVisualStyleBackColor = false;
             this.bttn_clearAll.Click += new System.EventHandler(this.clear_click);
             // 
-            // bttn_0
-            // 
-            this.bttn_0.Location = new System.Drawing.Point(230, 278);
-            this.bttn_0.Name = "bttn_0";
-            this.bttn_0.Size = new System.Drawing.Size(75, 23);
-            this.bttn_0.TabIndex = 19;
-            this.bttn_0.Text = "0";
-            this.bttn_0.UseVisualStyleBackColor = true;
-            this.bttn_0.Click += new System.EventHandler(this.bttn_num_Click);
-            // 
             // rtb_ans
             // 
             this.rtb_ans.Location = new System.Drawing.Point(149, 135);
@@ -332,11 +324,39 @@
             // lst_memFull
             // 
             this.lst_memFull.FormattingEnabled = true;
-            this.lst_memFull.Location = new System.Drawing.Point(787, 1);
+            this.lst_memFull.Location = new System.Drawing.Point(607, 119);
             this.lst_memFull.Name = "lst_memFull";
             this.lst_memFull.Size = new System.Drawing.Size(120, 95);
             this.lst_memFull.TabIndex = 24;
             this.lst_memFull.SelectedIndexChanged += new System.EventHandler(this.lst_memFull_SelectedIndexChanged);
+            // 
+            // bttn_0
+            // 
+            this.bttn_0.Location = new System.Drawing.Point(230, 278);
+            this.bttn_0.Name = "bttn_0";
+            this.bttn_0.Size = new System.Drawing.Size(75, 23);
+            this.bttn_0.TabIndex = 19;
+            this.bttn_0.Text = "0";
+            this.bttn_0.UseVisualStyleBackColor = true;
+            this.bttn_0.Click += new System.EventHandler(this.bttn_num_Click);
+            // 
+            // bttn_recalFull
+            // 
+            this.bttn_recalFull.Location = new System.Drawing.Point(526, 119);
+            this.bttn_recalFull.Name = "bttn_recalFull";
+            this.bttn_recalFull.Size = new System.Drawing.Size(75, 23);
+            this.bttn_recalFull.TabIndex = 25;
+            this.bttn_recalFull.Text = "Recall";
+            this.bttn_recalFull.UseVisualStyleBackColor = true;
+            this.bttn_recalFull.Click += new System.EventHandler(this.bttn_num_Click);
+            // 
+            // txt_previewFull
+            // 
+            this.txt_previewFull.Location = new System.Drawing.Point(607, 91);
+            this.txt_previewFull.Name = "txt_previewFull";
+            this.txt_previewFull.Size = new System.Drawing.Size(110, 20);
+            this.txt_previewFull.TabIndex = 26;
+            this.txt_previewFull.TextChanged += new System.EventHandler(this.txt_previewFull_TextChanged);
             // 
             // frmCalc
             // 
@@ -346,6 +366,8 @@
             this.CancelButton = this.bttnClose;
             this.ClientSize = new System.Drawing.Size(1113, 489);
             this.ControlBox = false;
+            this.Controls.Add(this.txt_previewFull);
+            this.Controls.Add(this.bttn_recalFull);
             this.Controls.Add(this.lst_memFull);
             this.Controls.Add(this.bttn_clearMemFast);
             this.Controls.Add(this.txt_memFastPrev);
@@ -407,13 +429,15 @@
         private System.Windows.Forms.Button bttn_mod;
         private System.Windows.Forms.Button bttn_clear;
         private System.Windows.Forms.Button bttn_clearAll;
-        private System.Windows.Forms.Button bttn_0;
         private System.Windows.Forms.RichTextBox rtb_ans;
         private System.Windows.Forms.Button bttn_recalFast;
         private System.Windows.Forms.Button bttn_memStoreFast;
         private System.Windows.Forms.TextBox txt_memFastPrev;
         private System.Windows.Forms.Button bttn_clearMemFast;
         private System.Windows.Forms.ListBox lst_memFull;
+        private System.Windows.Forms.Button bttn_0;
+        private System.Windows.Forms.Button bttn_recalFull;
+        private System.Windows.Forms.TextBox txt_previewFull;
     }
 }
 
