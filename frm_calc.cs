@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -237,11 +238,13 @@ namespace Calculator
 
         private void lst_memFull_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = lst_memFull.SelectedIndex;  //get intex
+            int position = lst_memFull.SelectedIndex;  //get intex
             memFull = lst_memFull.SelectedItem.ToString(); //get selected item, to manipulate to get the correct item
-            var memItems = memFull.Split('=');
-            memFull = memItems.Length.ToString();
-            txt_previewFull.Text = memFull;
+            var memItems = memFull.Split('=').ToList();
+            position = memItems.Count; //posistion is also used to find where the equals sign is
+            memFull = memItems[position];
+            txt_previewFull.Text = memFull; //set preview box
+            
         }
 
         private void txt_previewFull_TextChanged(object sender, EventArgs e)
