@@ -111,8 +111,10 @@ namespace Calculator
                 {
                     rtb_ans.Text = val; //as recalled from memory, set to value from memory
                 }
-                else 
+                else if (btn.Text == bttn_recalFull.Text) //as recalled from full memory, set
                 {
+                    rtb_ans.Text = txt_previewFull.Text;
+                } else {
                     rtb_ans.Text += val; //add entry to text
                 }
             };
@@ -242,7 +244,7 @@ namespace Calculator
             memFull = lst_memFull.SelectedItem.ToString(); //get selected item, to manipulate to get the correct item
             var memItems = memFull.Split('=').ToList();
             position = memItems.Count; //posistion is also used to find where the equals sign is
-            memFull = memItems[position];
+            memFull = memItems[position-1];
             txt_previewFull.Text = memFull; //set preview box
             
         }
